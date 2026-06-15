@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+/* DESKTOP — 1024px and above (covers 1024 / 1440 / 1920) */
+:root {
+  --primary: #155dfc;
+  --primary-hover: #1d4ed8;
+  --primary-bg: #ffffff;
+  --secondary-bg: #f8fafc;
+  --text-1: #000000;
+  --text-2: #475569;
+  --card-border: #f2f2f2;
+  --r-btn: 12px;
+  --r-lg-btn: 20px;
+  --r-lg: 50px;
+
+  /* Headings */
+  --font-weight-heading: 700; /* Bold */
+  --font-weight-body: 500; /* Medium */
+
+  --h1-size: 48px;
+  --h1-line-height: 58px;
+
+  --h2-size: 38px;
+  --h2-line-height: 48px;
+
+  --h3-size: 24px;
+  --h3-line-height: 32px;
+
+  --h4-size: 24px;
+  --h4-line-height: 32px;
+
+  --h5-size: 18px;
+  --h5-line-height: 26px;
+
+  --h6-size: 18px;
+  --h6-line-height: 26px;
+
+  /* Body */
+  --body-size: 16px;
+  --body-line-height: 26px;
+
+  --small-size: 14px;
+  --small-line-height: 20px;
+
+  /* Links */
+  --link-size: 14px;
+  --link-line-height: 21px;
+
+  /* Buttons — 3 named sizes */
+  --btn-sm-size: 12px;
+  --btn-md-size: 14px;
+  --btn-lg-size: 18px;
+
+  /* List items */
+  --li-size: 16px;
+  --li-line-height: 26px;
+
+  /* Fallback color variables */
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+/* TABLET — 768px to 1023px */
+@media (max-width: 1023px) {
+  :root {
+    --h1-size: 38px;
+    --h1-line-height: 48px;
+
+    --h2-size: 30px;
+    --h2-line-height: 38px;
+
+    --h3-size: 20px;
+    --h3-line-height: 28px;
+
+    --h4-size: 20px;
+    --h4-line-height: 28px;
+
+    --h5-size: 16px;
+    --h5-line-height: 24px;
+
+    --h6-size: 16px;
+    --h6-line-height: 24px;
+  }
+}
+
+/* MOBILE — up to 767px */
+@media (max-width: 767px) {
+  :root {
+    --h1-size: 28px;
+    --h1-line-height: 36px;
+
+    --h2-size: 24px;
+    --h2-line-height: 30px;
+
+    --h3-size: 18px;
+    --h3-line-height: 24px;
+
+    --h4-size: 18px;
+    --h4-line-height: 24px;
+
+    --h5-size: 14px;
+    --h5-line-height: 20px;
+
+    --h6-size: 14px;
+    --h6-line-height: 20px;
+
+    --body-size: 14px;
+    --body-line-height: 22px;
+
+    --small-size: 12px;
+    --small-line-height: 18px;
+
+    --link-size: 13px;
+    --link-line-height: 20px;
+
+    --btn-sm-size: 11px;
+    --btn-md-size: 13px;
+    --btn-lg-size: 16px;
+
+    --li-size: 14px;
+    --li-line-height: 22px;
+  }
+}
+
+/* Tailwind Theme Configuration (v4 syntax) */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Poppins", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Global Elements Reset — Enforcing Poppins everywhere */
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Poppins", sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Base Component Typography styling */
+h1 {
+  font-size: var(--h1-size);
+  line-height: var(--h1-line-height);
+  font-weight: var(--font-weight-heading);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  line-height: var(--h2-line-height);
+  font-weight: var(--font-weight-heading);
+}
+
+h3 {
+  font-size: var(--h3-size);
+  line-height: var(--h3-line-height);
+  font-weight: var(--font-weight-heading);
+}
+
+h4 {
+  font-size: var(--h4-size);
+  line-height: var(--h4-line-height);
+  font-weight: var(--font-weight-heading);
+}
+
+h5 {
+  font-size: var(--h5-size);
+  line-height: var(--h5-line-height);
+  font-weight: var(--font-weight-heading);
+}
+
+h6 {
+  font-size: var(--h6-size);
+  line-height: var(--h6-line-height);
+  font-weight: var(--font-weight-heading);
+}
+
+p,
+body {
+  font-size: var(--body-size);
+  line-height: var(--body-line-height);
+  font-weight: var(--font-weight-body);
+}
+
+li {
+  font-size: var(--li-size);
+  line-height: var(--li-line-height);
+  font-weight: var(--font-weight-body);
+}
+
+a {
+  font-size: var(--link-size);
+  line-height: var(--link-line-height);
+  font-weight: var(--font-weight-body);
+}
+
+/* Button sizes via utility classes */
+.btn-sm {
+  font-size: var(--btn-sm-size);
+  font-weight: var(--font-weight-body);
+}
+
+.btn-md {
+  font-size: var(--btn-md-size);
+  font-weight: var(--font-weight-body);
+}
+
+.btn-lg {
+  font-size: var(--btn-lg-size);
+  font-weight: var(--font-weight-body);
+}
+
+small {
+  font-size: var(--small-size);
+  line-height: var(--small-line-height);
+  font-weight: var(--font-weight-body);
+}
