@@ -319,7 +319,7 @@ export default function Navbar() {
           {/* Apply Now CTA Button */}
           <Link
             href="/apply"
-            className="btn-md bg-[#3E4095] hover:bg-[#3E4095] text-white px-6 py-3 rounded-[var(--r-lg)] flex items-center gap-2 transition-colors shadow-sm ml-2 shrink-0 text-center"
+            className="btn-md bg-[#3E4095] hover:bg-[#2A2C6B] text-white px-6 py-3 rounded-[var(--r-lg)] flex items-center gap-2 transition-colors shadow-sm ml-2 shrink-0 text-center"
             style={{ fontSize: "var(--btn-md-size)" }}
           >
             Apply Now
