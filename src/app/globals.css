@@ -5,14 +5,14 @@
 
 /* DESKTOP — 1024px and above (covers 1024 / 1440 / 1920) */
 :root {
-  --primary: #155dfc;
-  --primary-hover: #1d4ed8;
+  --primary: #403F96;
+  --primary-hover: #2F2E72;
   --primary-bg: #ffffff;
   --secondary-bg: #f8fafc;
   --text-1: #000000;
   --text-2: #475569;
   --card-border: #f2f2f2;
-  --r-btn: 12px;
+  --r-btn: 8px;
   --r-lg-btn: 20px;
   --r-lg: 50px;
 
@@ -177,13 +177,22 @@
 }
 
 html,
-body,
-button,
-input,
-select,
-textarea {
+body {
   background: var(--background);
   color: var(--foreground);
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #64748b !important;
+  opacity: 1 !important;
 }
 
 /* Base Component Typography styling */
@@ -285,7 +294,7 @@ small {
 
 /* Overlay dark fade animation (darker during transition, fades to normal opacity when active) */
 .swiper-slide .hero-overlay {
-  opacity: 0.95;
+  opacity: 0.4;
   transition: opacity 1.8s ease-in-out;
 }
 
@@ -327,4 +336,24 @@ small {
   width: 100%;
   height: 100%;
   touch-action: none;
+}
+
+/* Custom Swiper Pagination for Student Placements */
+.placement-pagination .swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #e2e8f0 !important;
+  opacity: 1 !important;
+  border-radius: 9999px !important;
+  transition: all 0.3s ease !important;
+  margin: 0 4px !important;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.placement-pagination .swiper-pagination-bullet-active {
+  width: 24px !important;
+  height: 8px !important;
+  background-color: var(--primary) !important;
+  border-radius: 9999px !important;
 }

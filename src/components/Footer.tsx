@@ -90,7 +90,7 @@ export default function Footer() {
                     {/* Column 3:  */}
                     <div className="flex flex-col space-y-4">
                         <h5
-                            className="  font-bold text-black"
+                            className="text-[var(--text-1)]"
                             style={{
                                 fontSize: "var(--h5-size)",
                                 lineHeight: "var(--h5-line-height)",
@@ -119,7 +119,7 @@ export default function Footer() {
                         <div className="pt-2">
                             <Link
                                 href="/directions"
-                                className="btn-sm inline-block border border-gray-700 text-white bg-[#3E4095] hover:bg-[#2A2C6B] px-6 py-2 transition-colors rounded-[6px]"
+                                className="btn-sm inline-block border border-gray-700 text-white bg-[#3E4095] hover:bg-[#2A2C6B] px-6 py-2 transition-colors rounded-[var(--r-btn)]"
                                 style={{ fontSize: "var(--btn-sm-size)" }}
                             >
                                 Get directions
@@ -130,7 +130,7 @@ export default function Footer() {
                     {/* Column 4: Quick Links */}
                     <div className="flex flex-col space-y-4">
                         <h5
-                            className="  font-bold text-black"
+                            className="text-[var(--text-1)]"
                             style={{
                                 fontSize: "var(--h5-size)",
                                 lineHeight: "var(--h5-line-height)",

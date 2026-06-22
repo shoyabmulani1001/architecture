@@ -60,7 +60,7 @@ export default function Navbar() {
         <nav className="hidden lg:flex items-center lg:gap-4 xl:gap-10 text-left xl:mr-32 2xl:mr-[210px] min-[2200px]:mr-[1250px] lg:mr-8 ml-auto ">
           <Link href="/">
             <span
-              className="text-black hover:text-[#3E4095] transition-colors"
+              className="text-[var(--text-1)] hover:text-[#3E4095] transition-colors"
               style={{
                 fontSize: "var(--body-size)",
                 lineHeight: "var(--body-line-height)",
@@ -73,7 +73,7 @@ export default function Navbar() {
 
           {/* Dropdown 1 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black hover:text-[#3E4095] inline-flex items-center gap-1">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-[var(--text-1)] hover:text-[#3E4095] inline-flex items-center gap-1">
               About Us
               <svg
                 className="w-3 h-3 transform group-hover:rotate-180 transition-transform"
@@ -89,7 +89,7 @@ export default function Navbar() {
                 />
               </svg>
             </span>
-            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-[var(--card-border)] py-2 min-w-[200px]">
+            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-[var(--r-btn)] border border-[var(--card-border)] py-2 min-w-[200px]">
               <Link
                 href="/about"
                 className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
@@ -131,7 +131,7 @@ export default function Navbar() {
 
           {/* Dropdown 2 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#3E4095] transition-colors">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-[var(--text-1)] inline-flex items-center gap-1 hover:text-[#3E4095] transition-colors">
               Academics
               <svg
                 className="w-3 h-3"
@@ -147,7 +147,7 @@ export default function Navbar() {
                 />
               </svg>
             </span>
-            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-[var(--card-border)] py-2 min-w-[200px]">
+            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-[var(--r-btn)] border border-[var(--card-border)] py-2 min-w-[200px]">
               <Link
                 href="/about"
                 className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
@@ -165,7 +165,7 @@ export default function Navbar() {
 
           {/* Dropdown 3 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#3E4095] transition-colors">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-[var(--text-1)] inline-flex items-center gap-1 hover:text-[#3E4095] transition-colors">
               Placement
               <svg
                 className="w-3 h-3"
@@ -181,9 +181,9 @@ export default function Navbar() {
                 />
               </svg>
             </span>
-            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-[var(--card-border)] py-2 min-w-[200px]">
+            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-[var(--r-btn)] border border-[var(--card-border)] py-2 min-w-[200px]">
               <Link
-                href="/about"
+                href="/placement-page"
                 className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
               >
                 About Placement
@@ -227,49 +227,22 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Dropdown 4 */}
-          <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#3E4095] transition-colors">
+          <Link href="/faculty-page">
+            <span
+              className="text-[var(--text-1)] hover:text-[#3E4095] transition-colors"
+              style={{
+                fontSize: "var(--body-size)",
+                lineHeight: "var(--body-line-height)",
+                fontWeight: "var(--font-weight-body)",
+              }}
+            >
               Faculty
-              <svg
-                className="w-3 h-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2.5}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
             </span>
-            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-[var(--card-border)] py-2 min-w-[200px]">
-              <Link
-                href="/about"
-                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
-              >
-                Director's Desk
-              </Link>
-              <Link
-                href="/vision"
-                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
-              >
-                Principal's Desk
-              </Link>
-              <Link
-                href="/vision"
-                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
-              >
-                Other Faculties
-              </Link>
-            </div>
-          </div>
+          </Link>
 
           {/* Dropdown 5 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#3E4095] transition-colors">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-[var(--text-1)] inline-flex items-center gap-1 hover:text-[#3E4095] transition-colors">
               Events & News
               <svg
                 className="w-3 h-3"
@@ -285,7 +258,7 @@ export default function Navbar() {
                 />
               </svg>
             </span>
-            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-[var(--card-border)] py-2 min-w-[200px]">
+            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-[var(--r-btn)] border border-[var(--card-border)] py-2 min-w-[200px]">
               <Link
                 href="/about"
                 className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
@@ -319,9 +292,9 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="/">
+          <Link href="/contact-us">
             <span
-              className="text-black hover:text-[#3E4095] transition-colors"
+              className="text-[var(--text-1)] hover:text-[#3E4095] transition-colors"
               style={{
                 fontSize: "var(--body-size)",
                 lineHeight: "var(--body-line-height)",
@@ -376,25 +349,31 @@ export default function Navbar() {
           <div className="px-6 py-4 flex flex-col gap-4">
             <Link
               href="/"
-              className="text-[var(--link-size)] font-medium py-1 border-b border-gray-50"
+              className="text-[var(--link-size)] py-1 border-b border-gray-50"
             >
               Home
             </Link>
-            <div className="text-[var(--link-size)] font-medium py-1 border-b border-gray-50 flex justify-between text-[#8a1529]">
+            <div className="text-[var(--link-size)] py-1 border-b border-gray-50 flex justify-between text-[#8a1529]">
               About Us <span>+</span>
             </div>
-            <div className="text-[var(--link-size)] font-medium py-1 border-b border-gray-50 flex justify-between">
+            <div className="text-[var(--link-size)] py-1 border-b border-gray-50 flex justify-between">
               Pages <span>+</span>
             </div>
-            <div className="text-[var(--link-size)] font-medium py-1 border-b border-gray-50 flex justify-between">
+            <div className="text-[var(--link-size)] py-1 border-b border-gray-50 flex justify-between">
               Academics <span>+</span>
             </div>
-            <div className="text-[var(--link-size)] font-medium py-1 border-b border-gray-50 flex justify-between">
+            <div className="text-[var(--link-size)] py-1 border-b border-gray-50 flex justify-between">
               Blog <span>+</span>
             </div>
             <Link
-              href="/contact"
-              className="text-[var(--link-size)] font-medium py-1"
+              href="/faculty-page"
+              className="text-[var(--link-size)] py-1 border-b border-gray-50 block"
+            >
+              Faculty
+            </Link>
+            <Link
+              href="/contact-us"
+              className="text-[var(--link-size)] py-1"
             >
               Contact
             </Link>

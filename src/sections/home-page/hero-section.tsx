@@ -9,42 +9,39 @@ import "swiper/css/navigation";
 
 const slides = [
     {
-        image: "/Home-page/home-slider1.jpg",
+        image: "/Home-page/hero-1.jpg",
         subtitle: "Welcome To DY Patil School Of Architexture",
         title: "Building Brighter Futures Through Education",
     },
     {
-        image: "/Home-page/home-slider2.jpg",
-        subtitle: "World Class Learning",
+        image: "/Home-page/hero-2.png",
+        subtitle: "Bachelor of Architecture (B.Arch)",
         title: "Empowering Students For Future Success",
     },
     {
-        image: "/Home-page/home-slider3.webp",
-        subtitle: "Research & Innovation",
+        image: "/Home-page/hero-3.webp",
+        subtitle: "Master of Architecture (M.Arch)",
         title: "Leading The Way In Academic Excellence",
     },
 ];
 
 export default function HeroSlider() {
-    const [prevEl, setPrevEl] = useState<HTMLButtonElement | null>(null);
-    const [nextEl, setNextEl] = useState<HTMLButtonElement | null>(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section className="relative h-screen overflow-hidden">
+        <section className="relative h-[100dvh] bg-[var(--primary-bg)] overflow-hidden">
             <Swiper
                 modules={[Autoplay, Navigation]}
                 navigation={{
-                    prevEl,
-                    nextEl,
+                    prevEl: ".hero-prev-btn",
+                    nextEl: ".hero-next-btn",
                 }}
-                direction="vertical"
+                direction="horizontal"
                 loop={true}
                 speed={1200}
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: false,
-                    reverseDirection: true,
                 }}
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                 className="h-full w-full"
@@ -52,12 +49,11 @@ export default function HeroSlider() {
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
                         <div
-                            className="relative h-screen bg-cover bg-center overflow-hidden"
+                            className="relative h-[100dvh] bg-cover bg-center overflow-hidden"
                             style={{
                                 backgroundImage: `url(${slide.image})`,
                             }}
                         >
-                            {/* Overlay */}
                             <div className="absolute inset-0 bg-black/60 hero-overlay" />
                         </div>
                     </SwiperSlide>
@@ -65,37 +61,25 @@ export default function HeroSlider() {
             </Swiper>
 
             {/* Stationary Content Overlay with Horizontal Animation */}
-            <div className="absolute inset-0 z-10 flex items-center justify-center text-center px-4 pointer-events-none">
-                <div className="max-w-5xl w-full -translate-y-16 relative min-h-[350px] flex items-center justify-center">
+            <div className="absolute inset-0 z-10 flex items-center justify-center text-center px-6 pointer-events-none">
+                <div className="max-w-5xl w-full -translate-y-8 sm:-translate-y-16 relative min-h-[350px] flex items-center justify-center">
                     {slides.map((slide, index) => {
                         const isActive = index === activeIndex;
-
                         return (
                             <div
                                 key={index}
-                                className={`absolute inset-0 flex flex-col items-center justify-center pointer-events-none`}
+                                className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
                             >
-                                <p
-                                    className={`text-white text-xl mb-6 font-medium tracking-wide uppercase ${isActive ? "hero-subtitle-active" : "hero-text-inactive"
-                                        }`}
-                                >
+                                <p className={`text-white mb-6 uppercase ${isActive ? "hero-subtitle-active" : "hero-text-inactive"}`}>
                                     {slide.subtitle}
                                 </p>
-
-                                <h1
-                                    className={`text-white text-5xl md:text-7xl font-bold leading-tight font-serif ${isActive ? "hero-title-active" : "hero-text-inactive"
-                                        }`}
-                                >
+                                <h1 className={`text-white ${isActive ? "hero-title-active" : "hero-text-inactive"}`}>
                                     {slide.title}
                                 </h1>
-
-                                <div
-                                    className={`mt-8 ${isActive ? "hero-btn-active" : "hero-text-inactive"
-                                        }`}
-                                >
+                                <div className={`mt-8 ${isActive ? "hero-btn-active" : "hero-text-inactive"}`}>
                                     <a
                                         href="#programs"
-                                        className="inline-block bg-[#3E4095] hover:bg-[#2A2C6B] text-white text-sm md:text-base font-semibold px-8 py-3.5 transition-colors duration-300 ease-in-out uppercase rounded-2xl pointer-events-auto"
+                                        className="inline-block bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white px-8 py-3.5 transition-colors duration-300 ease-in-out uppercase rounded-[var(--r-lg-btn)] pointer-events-auto"
                                     >
                                         View Programs
                                     </a>
@@ -108,45 +92,22 @@ export default function HeroSlider() {
 
             {/* Custom Navigation Buttons */}
             <button
-                ref={setPrevEl}
-                className="hero-prev-btn absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-[#9E1B1B] hover:bg-[#7F1212] text-white w-12 h-12 flex items-center justify-center transition-colors cursor-pointer select-none"
+                className="hero-prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-30 bg-transparent text-white w-20 h-20 flex items-center justify-center cursor-pointer select-none opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                aria-label="Previous Slide"
             >
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <svg className="w-10 h-10 fill-current" viewBox="0 0 24 24">
                     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
                 </svg>
             </button>
 
             <button
-                ref={setNextEl}
-                className="hero-next-btn absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-black/85 hover:bg-black text-white w-12 h-12 flex items-center justify-center transition-colors cursor-pointer select-none"
+                className="hero-next-btn absolute right-2 top-1/2 -translate-y-1/2 z-30 bg-transparent text-white w-20 h-20 flex items-center justify-center cursor-pointer select-none opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                aria-label="Next Slide"
             >
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <svg className="w-10 h-10 fill-current" viewBox="0 0 24 24">
                     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
                 </svg>
             </button>
-
-            {/* Bottom Cards */}
-            {/* <div className="absolute bottom-2 left-2 right-2 z-20">
-                <div className="grid md:grid-cols-3">
-                    <div className="bg-[#1d222d] py-8 px-10 text-center border-t border-[#2d3748]/30">
-                        <h3 className="text-white text-2xl md:text-3xl font-bold font-serif">
-                            Admission Open
-                        </h3>
-                    </div>
-
-                    <div className="bg-[#202633] py-8 text-center border-t border-[#2d3748]/30">
-                        <h3 className="text-white text-2xl md:text-3xl font-bold font-serif">
-                            Download Research Paper
-                        </h3>
-                    </div>
-
-                    <div className="bg-[#1d222d] py-8 text-center border-t border-[#2d3748]/30">
-                        <h3 className="text-white text-2xl md:text-3xl font-bold font-serif">
-                            Join Events
-                        </h3>
-                    </div>
-                </div>
-            </div> */}
         </section>
     );
 }
