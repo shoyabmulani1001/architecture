@@ -36,7 +36,7 @@ export default function CollaborationTabs({
         <div className="flex flex-col items-center gap-12">
 
             {/* Tabs */}
-            <div className="bg-[var(--primary)] rounded-[var(--r-btn)] p-2 w-full max-w-5xl flex gap-2 overflow-auto">
+            <div className="bg-[var(--primary)] rounded-[var(--r-btn)] p-2 w-full max-w-5xl flex flex-col sm:flex-row gap-2">
 
                 {(Object.keys(sections) as Array<
                     keyof typeof sections
@@ -47,7 +47,7 @@ export default function CollaborationTabs({
                         <button
                             key={key}
                             onClick={() => setActiveTab(key)}
-                            className={`flex-1 px-6 py-2 rounded-[var(--r-btn)] transition-all duration-300 cursor-pointer whitespace-nowrap
+                            className={`flex-1 px-4 sm:px-6 py-2 rounded-[var(--r-btn)] transition-all duration-300 cursor-pointer whitespace-nowrap text-sm sm:text-base
                                 ${active
                                     ? "bg-white text-[var(--text-1)]"
                                     : "text-white"

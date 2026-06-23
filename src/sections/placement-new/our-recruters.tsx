@@ -100,11 +100,11 @@ export default function OurRecruiters() {
 
             {/* Heading */}
             <div>
-                <h2 className="text-5xl font-bold text-[var(--text-1)] underline mb-6">
+                <h2 className="text-[var(--text-1)] mb-6">
                     Our Prominent Recruiters
                 </h2>
 
-                <p className="text-xl leading-9 text-gray-700 max-w-5xl">
+                <p className="text-[var(--text-2)] max-w-5xl">
                     DYPSOA maintains strong relationships with leading
                     national and international architectural firms, urban planning
                     agencies, construction conglomerates, and interior design studios.
@@ -119,13 +119,13 @@ export default function OurRecruiters() {
                 {stats.map((item, index) => (
                     <div
                         key={index}
-                        className="bg-white border border-gray-200 rounded-3xl p-8 text-center"
+                        className="bg-[var(--primary-bg)] border border-gray-200 rounded-3xl p-8 text-center"
                     >
-                        <h3 className="text-5xl font-bold text-[#3E4095] mb-3">
+                        <h3 className="text-[var(--text-1)] mb-3">
                             {item.value}
                         </h3>
 
-                        <p className="text-[var(--text-1)] font-medium">
+                        <p className="text-[var(--text-2)]">
                             {item.label}
                         </p>
                     </div>
@@ -139,10 +139,10 @@ export default function OurRecruiters() {
                 {recruiters.map((company, index) => (
                     <div
                         key={index}
-                        className="bg-white border border-gray-200 rounded-3xl p-8 flex items-center justify-center h-[160px] select-none"
+                        className="bg-[var(--primary-bg)] border border-gray-200 rounded-3xl p-8 flex items-center justify-center h-[160px] select-none"
                     >
                         {!company.logo ? (
-                            <div className="text-center font-bold tracking-wider text-base text-gray-700 uppercase font-mono px-4">
+                            <div className="text-center text-[var(--text-1)] uppercase font-mono px-4">
                                 {company.name}
                             </div>
                         ) : (
@@ -164,11 +164,11 @@ export default function OurRecruiters() {
             {/* Bottom Content */}
             <div className="bg-gradient-to-r from-[#3E4095] to-[#5658b9] rounded-3xl p-10 lg:p-14 text-white">
 
-                <h3 className="text-4xl font-bold mb-5">
+                <h3 className="mb-5">
                     Industry Connections That Build Careers
                 </h3>
 
-                <p className="text-lg leading-9 opacity-95">
+                <p className="">
                     Through meaningful industry partnerships and
                     recruiter engagement initiatives, DYPSOA helps
                     students gain practical exposure, professional

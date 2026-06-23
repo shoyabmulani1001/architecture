@@ -14,6 +14,11 @@ const slides = [
         title: "Building Brighter Futures Through Education",
     },
     {
+        image: "/Home-page/Farewell-Ceremony-Studio-19.webp",
+        subtitle: "Welcome To DY Patil School Of Architexture",
+        title: "Building Brighter Futures Through Education",
+    },
+    {
         image: "/Home-page/hero-2.png",
         subtitle: "Bachelor of Architecture (B.Arch)",
         title: "Empowering Students For Future Success",

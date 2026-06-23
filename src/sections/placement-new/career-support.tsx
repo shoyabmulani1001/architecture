@@ -53,11 +53,11 @@ export default function CareerSupport() {
 
             {/* Header */}
             <div>
-                <h2 className="text-5xl font-bold text-black mb-6">
+                <h2 className=" text-text-[var(--text-1)] mb-6">
                     Career Support
                 </h2>
 
-                <p className="text-xl text-gray-700 leading-9 max-w-5xl">
+                <p className="text-[var(--text-2)]  max-w-5xl">
                     At DYPSOA, we are committed to helping students
                     transform their academic journey into successful
                     professional careers through comprehensive career
@@ -66,13 +66,13 @@ export default function CareerSupport() {
             </div>
 
             {/* Overview */}
-            <div className="bg-white border border-gray-200 rounded-3xl p-10 shadow-sm">
+            <div className="bg-[var(--primary-bg)] border border-gray-200 rounded-3xl p-10 shadow-sm">
 
-                <h3 className="text-3xl font-semibold text-black mb-5">
+                <h3 className="text-text-[var(--text-1)] mb-5">
                     Empowering Future Professionals
                 </h3>
 
-                <p className="text-lg leading-9 text-gray-700">
+                <p className="text-[var(--text-2)]  max-w-5xl">
                     Our Career Support Cell works closely with students,
                     industry experts, recruiters, and alumni to provide
                     guidance, training, and opportunities that prepare
@@ -87,7 +87,7 @@ export default function CareerSupport() {
             {/* Services */}
             <div>
 
-                <h3 className="text-4xl font-bold text-black mb-8">
+                <h3 className="text-text-[var(--text-1)] mb-8">
                     Career Support Services
                 </h3>
 
@@ -96,17 +96,17 @@ export default function CareerSupport() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-md transition"
+                            className="bg-[var(--primary-bg)] border border-gray-200 rounded-3xl p-8 hover:shadow-md transition"
                         >
-                            <div className="w-14 h-14 rounded-2xl bg-[#3E4095]/10 flex items-center justify-center text-[#3E4095] mb-5">
+                            <div className="w-14 h-14 rounded-2xl bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)] mb-5">
                                 {service.icon}
                             </div>
 
-                            <h4 className="text-2xl font-semibold text-black mb-4">
+                            <h4 className="text-text-[var(--text-1)] mb-4">
                                 {service.title}
                             </h4>
 
-                            <p className="text-gray-700 leading-8">
+                            <p className="text-[var(--text-2)] ">
                                 {service.description}
                             </p>
                         </div>
@@ -119,7 +119,7 @@ export default function CareerSupport() {
             {/* Career Path */}
             <div>
 
-                <h3 className="text-4xl font-bold text-black mb-8">
+                <h3 className="text-4xl font-bold text-text-[var(--text-1)] mb-8">
                     Career Development Journey
                 </h3>
 
@@ -134,7 +134,7 @@ export default function CareerSupport() {
                                 STEP {index + 1}
                             </span>
 
-                            <h4 className="mt-3 text-lg font-semibold text-black">
+                            <h4 className="mt-3 text-lg font-semibold text-text-[var(--text-1)]">
                                 {step}
                             </h4>
                         </div>
@@ -159,7 +159,7 @@ export default function CareerSupport() {
 
                 <a
                     href="/contact-us"
-                    className="inline-flex items-center bg-white text-[#3E4095] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition"
+                    className="inline-flex items-center bg-[var(--primary-bg)] text-[#3E4095] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition"
                 >
                     Connect With Us
                 </a>

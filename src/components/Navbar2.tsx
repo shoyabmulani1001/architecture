@@ -8,6 +8,9 @@ import { IoLocationSharp } from "react-icons/io5";
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+    const [mobileAcademicsOpen, setMobileAcademicsOpen] = useState(false);
+    const [mobilePlacementOpen, setMobilePlacementOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -71,17 +74,17 @@ export default function Navbar() {
                         </div>
 
                         {/* Buttons */}
-                        <div className="flex flex-col gap-3 w-full sm:w-auto">
+                        <div className="flex flex-row sm:flex-col gap-3 w-full sm:w-auto justify-center sm:justify-start">
                             <Link
                                 href="#"
-                                className="bg-[var(--primary)] hover:bg-[var(--primary-hover)] transition-all duration-300 text-white px-6 py-3 rounded-[var(--r-btn)] text-center whitespace-nowrap"
+                                className="flex-1 sm:flex-none bg-[var(--primary)] hover:bg-[var(--primary-hover)] transition-all duration-300 text-white px-6 py-3 rounded-[var(--r-btn)] text-center whitespace-nowrap"
                             >
                                 B.Arch ERP
                             </Link>
 
                             <Link
                                 href="/contact"
-                                className="bg-[var(--primary)] hover:bg-[var(--primary-hover)] transition-all duration-300 text-white px-6 py-3 rounded-[var(--r-btn)] flex items-center justify-center gap-2 whitespace-nowrap"
+                                className="flex-1 sm:flex-none bg-[var(--primary)] hover:bg-[var(--primary-hover)] transition-all duration-300 text-white px-6 py-3 rounded-[var(--r-btn)] flex items-center justify-center gap-2 whitespace-nowrap"
                             >
                                 {/* <IoLocationSharp className="text-xl" /> */}
                                 M.Arch ERP
@@ -453,35 +456,97 @@ export default function Navbar() {
 
                     {/* --- MOBILE ACCORDION DRAWER --- */}
                     {isOpen && (
-                        <div className="lg:hidden absolute top-full left-0 w-full bg-white border-t border-[var(--card-border)] shadow-xl z-50 transition-all text-gray-800">
+                        <div className="lg:hidden absolute top-full left-0 w-full bg-white border-t border-[var(--card-border)] shadow-xl z-50 transition-all text-gray-800 max-h-[calc(100vh-80px)] overflow-y-auto">
                             <div className="px-6 py-4 flex flex-col gap-4">
                                 <Link
                                     href="/"
-                                    className="text-[var(--link-size)] py-1 border-b border-gray-50"
+                                    onClick={() => setIsOpen(false)}
+                                    className="text-[var(--link-size)] py-1 border-b border-gray-50 font-[var(--font-weight-body)] text-[var(--text-1)]"
                                 >
                                     Home
                                 </Link>
-                                <div className="text-[var(--link-size)] py-1 border-b border-gray-50 flex justify-between text-[#8a1529]">
-                                    About Us <span>+</span>
+
+                                {/* About Us Accordion */}
+                                <div>
+                                    <button
+                                        onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+                                        className="w-full text-[var(--link-size)] py-1 border-b border-gray-50 flex justify-between items-center text-[var(--text-1)] font-[var(--font-weight-body)] cursor-pointer"
+                                    >
+                                        About Us <span>{mobileAboutOpen ? "−" : "+"}</span>
+                                    </button>
+                                    {mobileAboutOpen && (
+                                        <div className="pl-4 flex flex-col gap-2.5 mt-2.5 mb-1.5">
+                                            <Link href="/about" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">About DYPSOA</Link>
+                                            <Link href="/management-page" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Our Management</Link>
+                                            <Link href="/vision" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Our Inspiration</Link>
+                                            <Link href="/about" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Vision & Mission</Link>
+                                            <Link href="/vision" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Director's Desk</Link>
+                                            <Link href="/about" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Key Features</Link>
+                                            <Link href="/vision" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Committees</Link>
+                                        </div>
+                                    )}
                                 </div>
-                                <div className="text-[var(--link-size)] py-1 border-b border-gray-50 flex justify-between">
-                                    Pages <span>+</span>
+
+                                {/* Academics Accordion */}
+                                <div>
+                                    <button
+                                        onClick={() => setMobileAcademicsOpen(!mobileAcademicsOpen)}
+                                        className="w-full text-[var(--link-size)] py-1 border-b border-gray-50 flex justify-between items-center text-[var(--text-1)] font-[var(--font-weight-body)] cursor-pointer"
+                                    >
+                                        Academics <span>{mobileAcademicsOpen ? "−" : "+"}</span>
+                                    </button>
+                                    {mobileAcademicsOpen && (
+                                        <div className="pl-4 flex flex-col gap-2.5 mt-2.5 mb-1.5">
+                                            <Link href="/about" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">B.Arch</Link>
+                                            <Link href="/vision" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">M.Arch</Link>
+                                        </div>
+                                    )}
                                 </div>
-                                <div className="text-[var(--link-size)] py-1 border-b border-gray-50 flex justify-between">
-                                    Academics <span>+</span>
+
+                                {/* Placement main link */}
+                                <Link
+                                    href="/placementnew-page"
+                                    onClick={() => setIsOpen(false)}
+                                    className="text-[var(--link-size)] py-1 border-b border-gray-50 font-[var(--font-weight-body)] text-[var(--text-1)]"
+                                >
+                                    Placement
+                                </Link>
+
+                                {/* Placement Details Accordion */}
+                                <div>
+                                    <button
+                                        onClick={() => setMobilePlacementOpen(!mobilePlacementOpen)}
+                                        className="w-full text-[var(--link-size)] py-1 border-b border-gray-50 flex justify-between items-center text-[var(--text-1)] font-[var(--font-weight-body)] cursor-pointer"
+                                    >
+                                        Placement Sections <span>{mobilePlacementOpen ? "−" : "+"}</span>
+                                    </button>
+                                    {mobilePlacementOpen && (
+                                        <div className="pl-4 flex flex-col gap-2.5 mt-2.5 mb-1.5">
+                                            <Link href="/placement-page#about-placement" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">About Placement</Link>
+                                            <Link href="/placement-page#placement-committee" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Placement Committee</Link>
+                                            <Link href="/placement-page#career-support" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Career Support</Link>
+                                            <Link href="/placement-page#placement-activities" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Placement Activities</Link>
+                                            <Link href="/placement-page#placement-brochure" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Placement Brochure</Link>
+                                            <Link href="/placement-page#placement-updates" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Placement Updates</Link>
+                                            <Link href="/placement-page#placement-status" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Placement Status</Link>
+                                            <Link href="/placement-page#our-recruiters" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Our Recruiters</Link>
+                                            <Link href="/placement-page#student-verification" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Student Verification</Link>
+                                            <Link href="/placement-page#job-fair" onClick={() => setIsOpen(false)} className="text-[var(--link-size)] text-[var(--text-2)] hover:text-[var(--primary)]">Job Fair</Link>
+                                        </div>
+                                    )}
                                 </div>
-                                <div className="text-[var(--link-size)]py-1 border-b border-gray-50 flex justify-between">
-                                    Blog <span>+</span>
-                                </div>
+
                                 <Link
                                     href="/faculty-page"
-                                    className="text-[var(--link-size)] py-1 border-b border-gray-50 block"
+                                    onClick={() => setIsOpen(false)}
+                                    className="text-[var(--link-size)] py-1 border-b border-gray-50 block font-[var(--font-weight-body)] text-[var(--text-1)]"
                                 >
                                     Faculty
                                 </Link>
                                 <Link
                                     href="/contact-us"
-                                    className="text-[var(--link-size)] py-1"
+                                    onClick={() => setIsOpen(false)}
+                                    className="text-[var(--link-size)] py-1 font-[var(--font-weight-body)] text-[var(--text-1)]"
                                 >
                                     Contact
                                 </Link>

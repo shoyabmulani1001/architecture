@@ -32,7 +32,7 @@ export default function ContactForm() {
 
                 <div className="grid md:grid-cols-2 gap-5">
 
-                    <select
+                    {/* <select
                         className="bg-white border-none rounded-[var(--r-btn)] px-5 py-2.5 text-black outline-none w-full"
                         defaultValue=""
                     >
@@ -43,7 +43,7 @@ export default function ContactForm() {
                         <option value="Technology">Technology</option>
                         <option value="Management">Management</option>
                         <option value="Diploma">Diploma</option>
-                    </select>
+                    </select> */}
 
                     <select
                         className="bg-white border-none rounded-[var(--r-btn)] px-5 py-2.5 text-black outline-none w-full"
@@ -58,11 +58,11 @@ export default function ContactForm() {
 
                 </div>
 
-                <textarea
+                {/* <textarea
                     rows={3}
                     placeholder="Enter Your Message..."
                     className="bg-white border-none rounded-[var(--r-btn)] px-5 py-2.5 text-black outline-none w-full !placeholder-black"
-                />
+                /> */}
 
                 <div className="flex items-center gap-3 text-[var(--text-1)] ">
                     <input type="checkbox" />
