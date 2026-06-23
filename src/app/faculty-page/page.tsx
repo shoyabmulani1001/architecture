@@ -12,7 +12,7 @@ export default function FacultyPage() {
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                         backgroundImage:
-                            "url('/Hero-Section/faculty.jpg')",
+                            "url('/Hero-Section/hero-image.jpeg')",
                     }}
                 />
 

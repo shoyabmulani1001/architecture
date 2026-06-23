@@ -283,12 +283,13 @@ small {
 }
 
 /* Background image subtle zoom-in out */
-.swiper-slide .bg-cover {
+.swiper-slide .hero-bg-image {
   transform: scale(1.12);
   transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
 }
 
-.swiper-slide-active .bg-cover {
+.swiper-slide-active .hero-bg-image {
   transform: scale(1);
 }
 
