@@ -48,12 +48,13 @@ export default function HeroSlider() {
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <div
-                            className="relative h-[100dvh] bg-cover bg-center overflow-hidden"
-                            style={{
-                                backgroundImage: `url(${slide.image})`,
-                            }}
-                        >
+                        <div className="relative h-[100dvh] w-full overflow-hidden">
+                            <div
+                                className="absolute inset-0 bg-cover bg-center hero-bg-image"
+                                style={{
+                                    backgroundImage: `url(${slide.image})`,
+                                }}
+                            />
                             <div className="absolute inset-0 bg-black/60 hero-overlay" />
                         </div>
                     </SwiperSlide>
