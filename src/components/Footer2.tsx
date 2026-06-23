@@ -6,9 +6,9 @@ export default function Footer() {
         <footer className="relative w-full  bg-[var(--primary-bg)] overflow-hidden">
             <div className="relative z-10 max-w-[1440px] mx-auto px-6 pt-16 pb-8 md:px-12 lg:px-16">
                 {/* Main Columns Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 mb-12">
+                <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 gap-10 lg:gap-20 mb-12">
                     {/* Column 1: Brand Profile */}
-                    <div className="flex flex-col space-y-6 lg:col-span-2 md:col-span-2">
+                    <div className="flex flex-col space-y-6 col-span-2 lg:col-span-2 md:col-span-2">
                         <div className="flex items-center ">
                             {/* Red Line-Art Shield & Lion Crest */}
                             <Link href="/">
@@ -37,7 +37,7 @@ export default function Footer() {
                             </p>
 
                             {/* Social Links */}
-                            <div className="flex items-center justify-center gap-8 pt-2">
+                            <div className="flex items-center justify-start gap-8 pt-2">
                                 {/* X / Twitter */}
                                 <Link
                                     href="https://x.com"
