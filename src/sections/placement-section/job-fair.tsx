@@ -57,55 +57,55 @@ export default function JobFair() {
     };
 
     return (
-        <section className="space-y-12">
+        <section className="space-y-10 md:space-y-12">
 
             {/* Heading */}
             <div>
-                <h2 className="text-5xl font-bold text-black underline mb-6">
+                <h2 className="text-3xl md:text-5xl font-bold text-black underline mb-6">
                     Job Fair
                 </h2>
 
-                <p className="text-xl leading-9 text-gray-700 max-w-5xl">
+                <p className="text-sm md:text-base lg:text-lg leading-relaxed text-gray-700 max-w-5xl">
                     Creating opportunities, fostering industry connections,
                     and empowering students through meaningful career interactions.
                 </p>
             </div>
 
             {/* Hero Card */}
-            <div className="bg-gradient-to-r from-[#3E4095] to-[#5C5ED2] rounded-3xl p-10 lg:p-14 text-white">
+            <div className="bg-gradient-to-r from-[#3E4095] to-[#5C5ED2] rounded-3xl p-6 md:p-10 lg:p-14 text-white">
 
-                <h3 className="text-4xl font-bold mb-8">
+                <h3 className="text-2xl md:text-4xl font-bold mb-6 md:mb-8">
                     {jobFairData.title}
                 </h3>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
                     <div>
-                        <p className="opacity-80 mb-2">
+                        <p className="opacity-80 mb-1 text-xs md:text-sm">
                             Event Date
                         </p>
 
-                        <h4 className="text-2xl font-semibold">
+                        <h4 className="text-lg md:text-2xl font-semibold">
                             {jobFairData.date}
                         </h4>
                     </div>
 
                     <div>
-                        <p className="opacity-80 mb-2">
+                        <p className="opacity-80 mb-1 text-xs md:text-sm">
                             Participation
                         </p>
 
-                        <h4 className="text-2xl font-semibold">
+                        <h4 className="text-lg md:text-2xl font-semibold">
                             {jobFairData.companies}
                         </h4>
                     </div>
 
                     <div>
-                        <p className="opacity-80 mb-2">
+                        <p className="opacity-80 mb-1 text-xs md:text-sm">
                             Focus Area
                         </p>
 
-                        <h4 className="text-2xl font-semibold">
+                        <h4 className="text-lg md:text-2xl font-semibold">
                             Career Opportunities
                         </h4>
                     </div>
@@ -115,30 +115,30 @@ export default function JobFair() {
             </div>
 
             {/* Introduction */}
-            <div className="bg-white rounded-3xl border border-gray-200 p-10">
+            <div className="bg-white rounded-3xl border border-gray-200 p-6 md:p-10">
 
-                <h3 className="text-3xl font-semibold text-black mb-5">
+                <h3 className="text-xl md:text-3xl font-semibold text-black mb-4">
                     Introduction
                 </h3>
 
-                <p className="text-lg leading-9 text-gray-700">
+                <p className="text-sm md:text-base leading-relaxed text-gray-700">
                     {jobFairData.introduction}
                 </p>
 
             </div>
 
             {/* Event Overview */}
-            <div className="bg-white rounded-3xl border border-gray-200 p-10">
+            <div className="bg-white rounded-3xl border border-gray-200 p-6 md:p-10">
 
-                <h3 className="text-3xl font-semibold text-black mb-5">
+                <h3 className="text-xl md:text-3xl font-semibold text-black mb-4">
                     Event Overview
                 </h3>
 
-                <p className="text-lg leading-9 text-gray-700 mb-6">
+                <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
                     {jobFairData.overview}
                 </p>
 
-                <p className="text-lg leading-9 text-gray-700">
+                <p className="text-sm md:text-base leading-relaxed text-gray-700">
                     {jobFairData.companiesDescription}
                 </p>
 
@@ -147,26 +147,26 @@ export default function JobFair() {
             {/* Highlights */}
             <div>
 
-                <h3 className="text-4xl font-bold text-black mb-8">
+                <h3 className="text-2xl md:text-4xl font-bold text-black mb-6">
                     Event Highlights
                 </h3>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                     {jobFairData.highlights.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-3xl border border-gray-200 p-8 shadow-sm"
+                            className="bg-white rounded-3xl border border-gray-200 p-6 md:p-8 shadow-sm"
                         >
                             <div className="w-14 h-14 rounded-2xl bg-[#3E4095]/10 flex items-center justify-center text-[#3E4095] mb-5">
                                 {item.icon}
                             </div>
 
-                            <h4 className="text-2xl font-semibold text-black mb-4">
+                            <h4 className="text-xl md:text-2xl font-semibold text-black mb-3">
                                 {item.title}
                             </h4>
 
-                            <p className="text-gray-700 leading-8">
+                            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                                 {item.description}
                             </p>
                         </div>
@@ -177,13 +177,13 @@ export default function JobFair() {
             </div>
 
             {/* Feedback */}
-            <div className="bg-[#F8F9FF] border border-[#D8DDFC] rounded-3xl p-10">
+            <div className="bg-[#F8F9FF] border border-[#D8DDFC] rounded-3xl p-6 md:p-10">
 
-                <h3 className="text-3xl font-semibold text-black mb-5">
+                <h3 className="text-xl md:text-3xl font-semibold text-black mb-4">
                     Attendee Feedback
                 </h3>
 
-                <p className="text-lg leading-9 text-gray-700">
+                <p className="text-sm md:text-base leading-relaxed text-gray-700">
                     {jobFairData.feedback}
                 </p>
 
@@ -192,11 +192,11 @@ export default function JobFair() {
             {/* Photo Gallery */}
             <div>
 
-                <h3 className="text-4xl font-bold text-black mb-8">
+                <h3 className="text-2xl md:text-4xl font-bold text-black mb-6">
                     Event Gallery
                 </h3>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     {jobFairData.images.map((image, index) => (
                         <div
@@ -208,7 +208,7 @@ export default function JobFair() {
                                 alt={`Job Fair ${index + 1}`}
                                 width={600}
                                 height={450}
-                                className="w-full h-[280px] object-cover transition duration-500 group-hover:scale-105"
+                                className="w-full h-[200px] md:h-[280px] object-cover transition duration-500 group-hover:scale-105"
                             />
                         </div>
                     ))}
@@ -218,13 +218,13 @@ export default function JobFair() {
             </div>
 
             {/* Conclusion */}
-            <div className="bg-[#3E4095] rounded-3xl p-10 lg:p-14 text-white">
+            <div className="bg-[#3E4095] rounded-3xl p-6 md:p-10 lg:p-14 text-white">
 
-                <h3 className="text-4xl font-bold mb-6">
+                <h3 className="text-2xl md:text-4xl font-bold mb-4">
                     Conclusion
                 </h3>
 
-                <p className="text-lg leading-9 opacity-95">
+                <p className="text-sm md:text-base lg:text-lg leading-relaxed opacity-95">
                     {jobFairData.conclusion}
                 </p>
 

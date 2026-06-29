@@ -28,24 +28,24 @@ export default function PlacementBrochure() {
 
             {/* Header */}
             <div className="border-b border-gray-100 pb-6">
-                <h2 className="text-5xl font-bold text-black mb-4">
+                <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
                     Placement Brochure
                 </h2>
 
-                <p className="text-lg leading-8 text-gray-600 max-w-4xl">
+                <p className="text-sm md:text-base lg:text-lg leading-relaxed text-gray-600 max-w-4xl">
                     Access our official placement brochures for the current academic year. Recruiters can explore curriculum outcomes, students' portfolios, and past internship profiles for both our undergraduate and postgraduate cohorts.
                 </p>
             </div>
 
             {/* Quick Placement Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {quickStats.map((stat, index) => (
                     <div key={index} className="flex items-center gap-4 bg-white border border-gray-150 rounded-2xl p-5 shadow-sm">
                         <div className="p-3 bg-indigo-50 rounded-xl">
                             {stat.icon}
                         </div>
                         <div>
-                            <div className="text-xl font-bold text-black">{stat.value}</div>
+                            <div className="text-lg md:text-xl font-bold text-black">{stat.value}</div>
                             <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
                         </div>
                     </div>
@@ -55,19 +55,19 @@ export default function PlacementBrochure() {
             {/* Compact Cards Grid (Stack on mobile, rows on larger screens) */}
             <div className="space-y-5">
                 {brochures.map((brochure, idx) => (
-                    <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6 hover:shadow-md transition">
+                    <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6 hover:shadow-md transition">
                         <div className="flex items-start gap-4">
-                            <div className="p-4 bg-indigo-50 rounded-xl text-[#3E4095] shrink-0">
-                                <FiFileText size={26} />
+                            <div className="p-3 md:p-4 bg-indigo-50 rounded-xl text-[#3E4095] shrink-0">
+                                <FiFileText size={24} />
                             </div>
                             <div className="space-y-1">
                                 <span className="inline-block text-xs font-semibold text-[#3E4095] tracking-wide uppercase">
                                     {brochure.stats}
                                 </span>
-                                <h3 className="text-xl font-bold text-black">
+                                <h3 className="text-lg md:text-xl font-bold text-black">
                                     {brochure.degree}
                                 </h3>
-                                <p className="text-gray-500 text-sm max-w-2xl leading-relaxed">
+                                <p className="text-gray-500 text-xs md:text-sm max-w-2xl leading-relaxed">
                                     {brochure.shortDesc}
                                 </p>
                             </div>
@@ -86,14 +86,14 @@ export default function PlacementBrochure() {
             </div>
 
             {/* Info and CTA Split Panel */}
-            <div className="grid lg:grid-cols-[1fr_350px] gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-6 lg:gap-8">
 
                 {/* Additional Placement Details */}
-                <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
-                    <h3 className="text-2xl font-semibold text-black mb-4">
+                <div className="bg-white border border-gray-200 rounded-3xl p-6 md:p-8 shadow-sm">
+                    <h3 className="text-xl md:text-2xl font-bold text-black mb-4">
                         Recruitment & Placement Process
                     </h3>
-                    <div className="space-y-4 text-gray-600 text-base leading-relaxed">
+                    <div className="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed">
                         <p>
                             DYPSOA offers a streamlined recruitment process designed to match the specific needs of design firms and developers with our highly-skilled students. Our training and placement office provides extensive workspace, digital presentation tools, and coordination support for recruitment sessions.
                         </p>
@@ -104,24 +104,24 @@ export default function PlacementBrochure() {
                 </div>
 
                 {/* Recruiter Relations CTA */}
-                <div className="bg-[#3E4095] rounded-3xl p-8 text-white flex flex-col justify-between">
+                <div className="bg-[#3E4095] rounded-3xl p-6 md:p-8 text-white flex flex-col justify-between gap-6">
                     <div>
                         <span className="text-xs uppercase tracking-wider opacity-85 font-bold">
                             Recruiter Relations
                         </span>
 
-                        <h3 className="text-2xl font-bold mt-2 mb-4">
+                        <h3 className="text-xl md:text-2xl font-bold mt-2 mb-4">
                             Connect with Our Talent
                         </h3>
 
-                        <p className="text-sm leading-relaxed opacity-90 mb-6">
+                        <p className="text-xs md:text-sm leading-relaxed opacity-90">
                             Are you looking to hire innovative minds, skilled designers, and dedicated professionals for your practice or firm? Partner with us today.
                         </p>
                     </div>
 
                     <Link
                         href="/contact-us"
-                        className="inline-flex items-center justify-center gap-2 bg-white text-[#3E4095] px-5 py-3 rounded-xl font-semibold text-sm hover:bg-gray-50 transition"
+                        className="inline-flex items-center justify-center gap-2 bg-white text-[#3E4095] px-5 py-3 rounded-xl font-semibold text-sm hover:bg-gray-50 transition w-full lg:w-auto"
                     >
                         Contact Placement Cell
                         <FiArrowRight />

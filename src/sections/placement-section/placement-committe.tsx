@@ -47,15 +47,15 @@ export default function PlacementCommittee() {
 
                 {/* Heading */}
                 <div>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-black underline mb-8">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black underline mb-6">
                         {committeeData.title}
                     </h2>
 
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                         {committeeData.description.map((item, index) => (
                             <p
                                 key={index}
-                                className="text-lg leading-9 text-black"
+                                className="text-sm md:text-base lg:text-lg leading-relaxed text-black"
                             >
                                 {item}
                             </p>
@@ -64,22 +64,22 @@ export default function PlacementCommittee() {
                 </div>
 
                 {/* Committee Table */}
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto bg-white rounded-2xl border border-gray-200 shadow-sm">
 
-                    <table className="w-full border border-gray-300">
+                    <table className="w-full min-w-[600px] border-collapse">
 
                         <thead>
                             <tr className="bg-[#3E4095] text-white">
 
-                                <th className="border border-gray-300 px-5 py-4 text-left font-semibold">
+                                <th className="px-5 py-4 text-left font-semibold text-sm md:text-base border-b border-gray-200">
                                     Sr. No.
                                 </th>
 
-                                <th className="border border-gray-300 px-5 py-4 text-left font-semibold">
+                                <th className="px-5 py-4 text-left font-semibold text-sm md:text-base border-b border-gray-200">
                                     Name of Committee Member
                                 </th>
 
-                                <th className="border border-gray-300 px-5 py-4 text-left font-semibold">
+                                <th className="px-5 py-4 text-left font-semibold text-sm md:text-base border-b border-gray-200">
                                     Designation
                                 </th>
 
@@ -90,17 +90,17 @@ export default function PlacementCommittee() {
                             {committeeData.members.map((member) => (
                                 <tr
                                     key={member.srNo}
-                                    className="hover:bg-gray-50 transition-colors"
+                                    className="hover:bg-gray-50 transition-colors border-b border-gray-150 last:border-b-0"
                                 >
-                                    <td className="border border-gray-300 px-5 py-4 text-black">
+                                    <td className="px-5 py-4 text-black text-sm md:text-base font-medium">
                                         {member.srNo}
                                     </td>
 
-                                    <td className="border border-gray-300 px-5 py-4 text-black">
+                                    <td className="px-5 py-4 text-black text-sm md:text-base">
                                         {member.name}
                                     </td>
 
-                                    <td className="border border-gray-300 px-5 py-4 text-black">
+                                    <td className="px-5 py-4 text-black text-sm md:text-base">
                                         {member.designation}
                                     </td>
                                 </tr>

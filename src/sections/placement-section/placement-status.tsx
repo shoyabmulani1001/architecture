@@ -68,11 +68,11 @@ export default function PlacementStatus() {
 
             {/* Heading */}
             <div>
-                <h2 className="text-5xl font-bold text-black underline mb-6">
+                <h2 className="text-3xl md:text-5xl font-bold text-black underline mb-6">
                     Placement Status of DYPSOA
                 </h2>
 
-                <p className="text-xl text-gray-700 leading-9 max-w-5xl">
+                <p className="text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-5xl">
                     DYPSOA is committed to preparing students for
                     successful professional careers through academic
                     excellence, industry collaborations, internships,
@@ -85,28 +85,28 @@ export default function PlacementStatus() {
             {/* Table */}
             <div className="overflow-x-auto bg-white rounded-3xl border border-gray-200 shadow-sm">
 
-                <table className="w-full">
+                <table className="w-full min-w-[600px] border-collapse">
 
                     <thead>
                         <tr className="bg-[#3E4095] text-white">
 
-                            <th className="px-6 py-5 text-left">
+                            <th className="px-4 py-4 md:px-6 md:py-5 text-left text-xs md:text-sm lg:text-base font-semibold">
                                 Particulars
                             </th>
 
-                            <th className="px-6 py-5 text-center">
+                            <th className="px-4 py-4 md:px-6 md:py-5 text-center text-xs md:text-sm lg:text-base font-semibold">
                                 2021-22
                             </th>
 
-                            <th className="px-6 py-5 text-center">
+                            <th className="px-4 py-4 md:px-6 md:py-5 text-center text-xs md:text-sm lg:text-base font-semibold">
                                 2022-23
                             </th>
 
-                            <th className="px-6 py-5 text-center">
+                            <th className="px-4 py-4 md:px-6 md:py-5 text-center text-xs md:text-sm lg:text-base font-semibold">
                                 2023-24
                             </th>
 
-                            <th className="px-6 py-5 text-center">
+                            <th className="px-4 py-4 md:px-6 md:py-5 text-center text-xs md:text-sm lg:text-base font-semibold">
                                 2024-25
                             </th>
 
@@ -118,10 +118,10 @@ export default function PlacementStatus() {
                         {placementData.map((row, index) => (
                             <tr
                                 key={index}
-                                className="border-b border-gray-200"
+                                className="border-b border-gray-200 last:border-b-0 hover:bg-gray-50 transition-colors"
                             >
                                 <td
-                                    className={`px-6 py-5 text-black ${row.isTotal
+                                    className={`px-4 py-4 md:px-6 md:py-5 text-black text-xs md:text-sm lg:text-base ${row.isTotal
                                         ? "font-bold"
                                         : ""
                                         }`}
@@ -130,7 +130,7 @@ export default function PlacementStatus() {
                                 </td>
 
                                 <td
-                                    className={`px-6 py-5 text-center text-black ${row.isTotal
+                                    className={`px-4 py-4 md:px-6 md:py-5 text-center text-black text-xs md:text-sm lg:text-base ${row.isTotal
                                         ? "font-bold"
                                         : ""
                                         }`}
@@ -139,7 +139,7 @@ export default function PlacementStatus() {
                                 </td>
 
                                 <td
-                                    className={`px-6 py-5 text-center text-black ${row.isTotal
+                                    className={`px-4 py-4 md:px-6 md:py-5 text-center text-black text-xs md:text-sm lg:text-base ${row.isTotal
                                         ? "font-bold"
                                         : ""
                                         }`}
@@ -148,7 +148,7 @@ export default function PlacementStatus() {
                                 </td>
 
                                 <td
-                                    className={`px-6 py-5 text-center text-black ${row.isTotal
+                                    className={`px-4 py-4 md:px-6 md:py-5 text-center text-black text-xs md:text-sm lg:text-base ${row.isTotal
                                         ? "font-bold"
                                         : ""
                                         }`}
@@ -157,7 +157,7 @@ export default function PlacementStatus() {
                                 </td>
 
                                 <td
-                                    className={`px-6 py-5 text-center text-black ${row.isTotal
+                                    className={`px-4 py-4 md:px-6 md:py-5 text-center text-black text-xs md:text-sm lg:text-base ${row.isTotal
                                         ? "font-bold"
                                         : ""
                                         }`}
@@ -174,32 +174,32 @@ export default function PlacementStatus() {
             </div>
 
             {/* Custom Bar Chart Card */}
-            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+            <div className="bg-white border border-gray-200 rounded-3xl p-5 md:p-8 shadow-sm">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
                     <div>
-                        <h3 className="text-2xl font-bold text-black">
+                        <h3 className="text-lg md:text-2xl font-bold text-black">
                             Annual Placement Trends
                         </h3>
-                        <p className="text-gray-500 text-sm mt-1">
+                        <p className="text-gray-500 text-xs md:text-sm mt-1">
                             Comparison of outgoing students vs. successfully placed graduates
                         </p>
                     </div>
 
                     {/* Chart Legend */}
-                    <div className="flex items-center gap-6 text-sm font-medium">
+                    <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs md:text-sm font-medium">
                         <div className="flex items-center gap-2">
-                            <span className="w-3.5 h-3.5 rounded-sm bg-[#3E4095]" />
+                            <span className="w-3 h-3 rounded-sm bg-[#3E4095]" />
                             <span className="text-gray-700">Outgoing Students</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="w-3.5 h-3.5 rounded-sm bg-emerald-500" />
+                            <span className="w-3 h-3 rounded-sm bg-emerald-500" />
                             <span className="text-gray-700">Placed Students</span>
                         </div>
                     </div>
                 </div>
 
                 {/* Chart Area */}
-                <div className="relative h-[300px] border-b border-gray-200 flex items-end justify-between pt-6 px-4 md:px-12">
+                <div className="relative h-[300px] border-b border-gray-200 flex items-end justify-between pt-6 px-2 md:px-12">
                     {/* Y-axis gridlines */}
                     <div className="absolute inset-0 flex flex-col justify-between pointer-events-none text-xs text-gray-400">
                         <div className="w-full border-t border-dashed border-gray-100 pt-1">160</div>
@@ -217,7 +217,7 @@ export default function PlacementStatus() {
 
                             return (
                                 <div key={index} className="flex flex-col items-center gap-3 w-1/4 h-full justify-end">
-                                    <div className="flex items-end gap-3 md:gap-5 h-[220px] w-full justify-center">
+                                    <div className="flex items-end gap-1.5 md:gap-5 h-[220px] w-full justify-center">
                                         {/* Outgoing Bar */}
                                         <div className="relative group flex flex-col items-center h-full justify-end">
                                             {/* Tooltip */}
@@ -226,7 +226,7 @@ export default function PlacementStatus() {
                                             </div>
                                             <div
                                                 style={{ height: outgoingHeight }}
-                                                className="w-8 md:w-12 bg-[#3E4095] rounded-t-lg transition-all duration-500 group-hover:opacity-90 cursor-pointer shadow-sm"
+                                                className="w-5 sm:w-8 md:w-12 bg-[#3E4095] rounded-t-lg transition-all duration-500 group-hover:opacity-90 cursor-pointer shadow-sm"
                                             />
                                         </div>
 
@@ -238,13 +238,13 @@ export default function PlacementStatus() {
                                             </div>
                                             <div
                                                 style={{ height: placedHeight }}
-                                                className="w-8 md:w-12 bg-emerald-500 rounded-t-lg transition-all duration-500 group-hover:opacity-90 cursor-pointer shadow-sm"
+                                                className="w-5 sm:w-8 md:w-12 bg-emerald-500 rounded-t-lg transition-all duration-500 group-hover:opacity-90 cursor-pointer shadow-sm"
                                             />
                                         </div>
                                     </div>
 
                                     {/* Year Label */}
-                                    <span className="text-sm font-semibold text-black mt-2">
+                                    <span className="text-xs md:text-sm font-semibold text-black mt-2">
                                         {data.year}
                                     </span>
                                 </div>
@@ -255,13 +255,13 @@ export default function PlacementStatus() {
             </div>
 
             {/* Bottom Content */}
-            <div className="bg-[#3E4095] rounded-3xl p-10 text-white">
+            <div className="bg-[#3E4095] rounded-3xl p-6 md:p-10 text-white">
 
-                <h3 className="text-3xl font-bold mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">
                     Building Successful Careers
                 </h3>
 
-                <p className="text-lg leading-9 opacity-90">
+                <p className="text-sm md:text-base lg:text-lg leading-relaxed opacity-90">
                     Through dedicated placement support, industry
                     engagement programs, internship opportunities,
                     expert sessions, and career development initiatives,

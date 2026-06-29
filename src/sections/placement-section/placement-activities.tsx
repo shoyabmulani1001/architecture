@@ -52,11 +52,11 @@ export default function PlacementActivities() {
 
             {/* Heading */}
             <div>
-                <h2 className=" text-[var(--text-1)] mb-4">
+                <h2 className="text-3xl md:text-5xl font-bold text-[var(--text-1)] mb-4">
                     Placement Activities
                 </h2>
 
-                <p className="text-[var(--text-2)] max-w-4xl">
+                <p className="text-sm md:text-base lg:text-lg text-[var(--text-2)] max-w-4xl leading-relaxed">
                     Through industry engagement, practical exposure,
                     and professional development initiatives, DYPSOA
                     equips students with the knowledge, confidence,
@@ -79,14 +79,14 @@ export default function PlacementActivities() {
                                     openIndex === index ? null : index
                                 )
                             }
-                            className="w-full flex items-center justify-between px-8 py-4 text-left"
+                            className="w-full flex items-center justify-between px-5 py-4 md:px-8 md:py-4 text-left"
                         >
-                            <div className="flex items-center gap-5">
-                                <div className="text-[#3E4095]">
+                            <div className="flex items-center gap-4 md:gap-5">
+                                <div className="text-[#3E4095] shrink-0">
                                     {activity.icon}
                                 </div>
 
-                                <h6 className="text-[var(--text-1)]">
+                                <h6 className="text-[var(--text-1)] font-semibold text-base md:text-lg">
                                     {activity.title}
                                 </h6>
                             </div>
@@ -101,24 +101,24 @@ export default function PlacementActivities() {
                         </button>
 
                         {openIndex === index && (
-                            <div className="px-8 pb-8 animate-fadeIn">
-                                <div className="h-px bg-gray-200 mb-6" />
+                            <div className="px-5 pb-6 md:px-8 md:pb-8 animate-fadeIn">
+                                <div className="h-px bg-gray-200 mb-4 md:mb-6" />
 
-                                <p className="text-[var(--text-2)] mb-6">
+                                <p className="text-[var(--text-2)] text-sm md:text-base leading-relaxed mb-6">
                                     {activity.description}
                                 </p>
 
-                                <div className="bg-[var(--primary-bg)] rounded-2xl p-6 border border-gray-100">
-                                    <h4 className="text-[var(--text-1)] uppercase mb-4">
+                                <div className="bg-[var(--primary-bg)] rounded-2xl p-5 md:p-6 border border-gray-100">
+                                    <h4 className="text-[var(--text-1)] text-xs md:text-sm font-bold uppercase mb-4 tracking-wider">
                                         Key Benefits for Students
                                     </h4>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {activity.highlights.map((highlight, idx) => (
                                             <li key={idx} className="flex items-start gap-3">
-                                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center mt-1">
+                                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center mt-1 text-xs">
                                                     ✓
                                                 </span>
-                                                <span className="text-[var(--text-2)]">
+                                                <span className="text-[var(--text-2)] text-sm md:text-base leading-relaxed">
                                                     {highlight}
                                                 </span>
                                             </li>
