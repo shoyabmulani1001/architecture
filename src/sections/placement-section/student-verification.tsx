@@ -12,15 +12,15 @@ export default function StudentVerification() {
     };
 
     return (
-        <section className="space-y-12">
+        <section className="space-y-10 md:space-y-12">
 
             {/* Heading */}
             <div>
-                <h2 className="text-5xl font-bold text-black underline mb-6">
+                <h2 className="text-3xl md:text-5xl font-bold text-black underline mb-6">
                     Student Verification
                 </h2>
 
-                <p className="text-xl leading-9 text-gray-700 max-w-5xl">
+                <p className="text-sm md:text-base lg:text-lg leading-relaxed text-gray-700 max-w-5xl">
                     DYPSOA provides an official student verification service
                     for employers, educational institutions, government
                     organizations, and authorized agencies seeking to verify
@@ -30,23 +30,23 @@ export default function StudentVerification() {
             </div>
 
             {/* Main Content */}
-            <div className="grid lg:grid-cols-[1.4fr_420px] gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_420px] gap-6 lg:gap-8">
 
                 {/* Process */}
-                <div className="bg-white border border-gray-200 rounded-3xl p-10 shadow-sm">
+                <div className="bg-white border border-gray-200 rounded-3xl p-6 md:p-10 shadow-sm">
 
-                    <div className="flex items-center gap-3 mb-8">
+                    <div className="flex items-center gap-3 mb-6 md:mb-8">
                         <FiFileText
-                            size={26}
+                            size={24}
                             className="text-[#3E4095]"
                         />
 
-                        <h3 className="text-3xl font-semibold text-black">
+                        <h3 className="text-xl md:text-3xl font-semibold text-black">
                             Verification Process
                         </h3>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-gray-700">
+                    <div className="space-y-4 md:space-y-6 text-sm md:text-base leading-relaxed text-gray-700">
 
                         <p>
                             Organizations and agencies requesting
@@ -79,9 +79,9 @@ export default function StudentVerification() {
                 </div>
 
                 {/* Contact Card */}
-                <div className="bg-[#3E4095] rounded-3xl p-10 text-white">
+                <div className="bg-[#3E4095] rounded-3xl p-6 md:p-10 text-white">
 
-                    <h3 className="text-3xl font-bold mb-8">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
                         Verification Contact
                     </h3>
 
@@ -133,7 +133,7 @@ export default function StudentVerification() {
             </div>
 
             {/* Important Notice */}
-            <div className="bg-[#F8F9FF] border border-[#D7DDFE] rounded-3xl p-8">
+            <div className="bg-[#F8F9FF] border border-[#D7DDFE] rounded-3xl p-5 md:p-8">
 
                 <div className="flex gap-4">
 
@@ -143,11 +143,11 @@ export default function StudentVerification() {
                     />
 
                     <div>
-                        <h3 className="text-2xl font-semibold text-black mb-3">
+                        <h3 className="text-lg md:text-2xl font-semibold text-black mb-2 md:mb-3">
                             Important Information
                         </h3>
 
-                        <p className="text-lg leading-8 text-gray-700">
+                        <p className="text-sm md:text-base leading-relaxed text-gray-700">
                             Verification requests must be submitted by
                             authorized organizations only. Incomplete
                             requests may result in processing delays.

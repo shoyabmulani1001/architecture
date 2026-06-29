@@ -42,10 +42,10 @@ export default function AboutPlacement() {
             <div className="space-y-12">
 
                 {/* Top Section */}
-                <div className="grid lg:grid-cols-[280px_1fr] gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 md:gap-10 lg:gap-12">
 
                     {/* Profile Card */}
-                    <div className="bg-white rounded-2xl shadow-sm overflow-hidden h-fit border border-gray-200">
+                    <div className="bg-white rounded-2xl shadow-sm overflow-hidden h-fit border border-gray-200 max-w-sm mx-auto md:max-w-none w-full">
                         <Image
                             src={placementData.coordinator.image}
                             alt={placementData.coordinator.name}
@@ -54,31 +54,31 @@ export default function AboutPlacement() {
                             className="w-full h-[280px] object-cover"
                         />
 
-                        <div className="p-7">
-                            <h6 className=" text-[var(--text-1)] mb-2">
+                        <div className="p-5 md:p-7">
+                            <h6 className="text-[var(--text-1)] mb-2 font-bold">
                                 {placementData.coordinator.name}
                             </h6>
 
-                            <p className="text-lg text-[var(--text-1)]">
+                            <p className="text-base md:text-lg text-[var(--text-1)]">
                                 {placementData.coordinator.designation}
                             </p>
 
-                            <p className="text-lg text-[var(--text-1)] mt-1">
+                            <p className="text-base md:text-lg text-[var(--text-1)] mt-1">
                                 Experience - {placementData.coordinator.experience}
                             </p>
                         </div>
                     </div>
 
                     {/* Main Content */}
-                    <div>
-                        <h4 className=" text-[var(--text-1)]  mb-4">
+                    <div className="space-y-4">
+                        <h4 className="text-[var(--text-1)] font-bold text-2xl md:text-3xl mb-4">
                             {placementData.title}
                         </h4>
 
                         {placementData.description.map((paragraph, index) => (
                             <p
                                 key={index}
-                                className=" text-[var(--text-1)] mb-4"
+                                className="text-[var(--text-1)] leading-relaxed text-sm md:text-base"
                             >
                                 {paragraph}
                             </p>
@@ -88,7 +88,7 @@ export default function AboutPlacement() {
 
                 {/* Aim Section */}
                 <div>
-                    <h3 className=" text-[var(--text-1)] mb-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-[var(--text-1)] mb-6">
                         {placementData.aimTitle}
                     </h3>
 
@@ -96,21 +96,21 @@ export default function AboutPlacement() {
                         {placementData.aims.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex items-start gap-2"
+                                className="flex items-start gap-3"
                             >
                                 <FaCheckCircle
-                                    size={22}
-                                    className="text-[var(--text-1)] mt-2 shrink-0"
+                                    size={18}
+                                    className="text-[var(--primary)] mt-1.5 shrink-0"
                                 />
 
-                                <p className=" text-[var(--text-1)]">
+                                <p className="text-[var(--text-1)] text-sm md:text-base leading-relaxed">
                                     {item}
                                 </p>
                             </div>
                         ))}
                     </div>
 
-                    <p className="mt-9 text-[var(--text-1)]">
+                    <p className="mt-8 text-[var(--text-1)] text-sm md:text-base leading-relaxed">
                         {placementData.conclusion}
                     </p>
                 </div>

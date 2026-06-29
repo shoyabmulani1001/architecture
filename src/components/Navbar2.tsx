@@ -344,6 +344,22 @@ export default function Navbar() {
                             </Link>
 
                         </div>
+                        {/* Dropdown 4 */}
+                        <div className="relative group cursor-pointer py-2">
+                            <Link href="/events-page">
+                                <span
+                                    className="text-white hover:text-gray-200 transition-colors cursor-pointer"
+                                    style={{
+                                        fontSize: "var(--body-size)",
+                                        lineHeight: "var(--body-line-height)",
+                                        fontWeight: "var(--font-weight-body)",
+                                    }}
+                                >
+                                    Events
+                                </span>
+                            </Link>
+
+                        </div>
 
                         {/* Dropdown 5 */}
                         {/* <div className="relative group cursor-pointer py-2">

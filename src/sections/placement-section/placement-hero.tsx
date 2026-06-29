@@ -9,7 +9,7 @@ export default function PlacementHero({
 }: PlacementHeroProps) {
     return (
         <section
-            className="relative min-h-[280px] flex items-end pb-8"
+            className="relative min-h-[220px] md:min-h-[280px] flex items-end pb-6 md:pb-8"
             style={{
                 backgroundImage:
                     "url('/Hero-Section/contact-us.png')",
@@ -21,7 +21,7 @@ export default function PlacementHero({
 
             <div className="w-full max-w-[1230px] mx-auto px-4 lg:px-8 relative z-10">
                 <div className="max-w-3xl text-left">
-                    <h1 className="text-white mb-3">
+                    <h1 className="text-white text-3xl md:text-5xl font-bold mb-3">
                         Placements
                     </h1>
 

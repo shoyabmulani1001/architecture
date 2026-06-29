@@ -391,7 +391,7 @@ export default function FacultySection() {
                 </div>
 
                 {/* Faculty Grid */}
-                <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-10">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
 
                     {filteredFaculty.map((item, index) => (
                         <div
@@ -399,7 +399,7 @@ export default function FacultySection() {
                             className="group cursor-pointer"
                             onClick={() => setSelectedMember(item)}
                         >
-                            <div className="relative h-[220px] overflow-hidden rounded-[var(--r-lg-btn)] bg-gray-100 mb-3">
+                            <div className="relative h-[200px] sm:h-[220px] overflow-hidden rounded-[var(--r-lg-btn)] bg-gray-100 mb-3">
                                 <Image
                                     src={item.image}
                                     alt={item.name}
@@ -409,11 +409,11 @@ export default function FacultySection() {
                             </div>
 
                             <div>
-                                <h6 className="text-[var(--text-1)]">
+                                <h6 className="text-[var(--text-1)] text-sm sm:text-base">
                                     {item.name}
                                 </h6>
 
-                                <p className="uppercase text-[var(--text-2)] mt-1">
+                                <p className="uppercase text-[var(--text-2)] text-xs sm:text-sm mt-1">
                                     {item.role}
                                 </p>
                             </div>
@@ -431,14 +431,14 @@ export default function FacultySection() {
                                 </h4>
                             </div>
 
-                            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-10">
+                            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
                                 {visitingFaculty.map((item, index) => (
                                     <div
                                         key={index}
                                         className="group cursor-pointer"
                                         onClick={() => setSelectedMember(item)}
                                     >
-                                        <div className="relative h-[220px] overflow-hidden rounded-[var(--r-btn)] mb-3">
+                                        <div className="relative h-[200px] sm:h-[220px] overflow-hidden rounded-[var(--r-btn)] mb-3">
                                             <Image
                                                 src={item.image}
                                                 alt={item.name}
@@ -448,11 +448,11 @@ export default function FacultySection() {
                                         </div>
 
                                         <div>
-                                            <h6 className="text-[var(--text-1)]">
+                                            <h6 className="text-[var(--text-1)] text-sm sm:text-base">
                                                 {item.name}
                                             </h6>
 
-                                            <p className="text-[var(--text-2)] mt-1">
+                                            <p className="text-[var(--text-2)] text-xs sm:text-sm mt-1">
                                                 {item.role}
                                             </p>
                                         </div>
@@ -469,14 +469,14 @@ export default function FacultySection() {
                                 </h4>
                             </div>
 
-                            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-10">
+                            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-10">
                                 {nonTeachingFaculty.map((item, index) => (
                                     <div
                                         key={index}
                                         className="group cursor-pointer"
                                         onClick={() => setSelectedMember(item)}
                                     >
-                                        <div className="relative h-[220px] overflow-hidden rounded-[var(--r-btn)] bg-gray-100 mb-3">
+                                        <div className="relative h-[200px] sm:h-[220px] overflow-hidden rounded-[var(--r-btn)] bg-gray-100 mb-3">
                                             <Image
                                                 src={item.image}
                                                 alt={item.name}
@@ -486,11 +486,11 @@ export default function FacultySection() {
                                         </div>
 
                                         <div>
-                                            <h6 className="text-[var(--text-1)]">
+                                            <h6 className="text-[var(--text-1)] text-sm sm:text-base">
                                                 {item.name}
                                             </h6>
 
-                                            <p className="text-[var(--text-2)] mt-1">
+                                            <p className="text-[var(--text-2)] text-xs sm:text-sm mt-1">
                                                 {item.role}
                                             </p>
                                         </div>

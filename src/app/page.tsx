@@ -10,13 +10,16 @@ import ProgramsSection from "../sections/home-page/programs2";
 import StudentPlacements from "../sections/home-page/student-placement";
 import FAQAndCounsellor from "../sections/home-page/faq-section";
 import Collaboration from "../sections/home-page/collaboration";
+import CollaborationSection from "../sections/home-page/collaboration-slider";
 
 export default function Home() {
   return (
     <div >
       <main>
         <Hero />
+        <CollaborationSection />
         <AboutUs />
+        
         <Collaboration />
         {/* <FoundersSection /> */}
         {/* <Programs /> */}

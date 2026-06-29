@@ -37,14 +37,14 @@ export default function PlacementPage() {
         <>
             <PlacementHero currentTab="Placements" />
 
-            <section className="py-20 bg-[#fafafa]">
+            <section className="py-10 lg:py-20 bg-[#fafafa]">
                 <div className="max-w-[1440px] mx-auto px-4 lg:px-8">
 
                     <div className="grid lg:grid-cols-[380px_1fr] gap-10">
 
                         <PlacementSidebar />
 
-                        <div className="space-y-24">
+                        <div className="space-y-12 lg:space-y-24">
 
                             <section id="about-placement">
                                 <AboutPlacement />
