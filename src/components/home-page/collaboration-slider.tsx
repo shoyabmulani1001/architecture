@@ -31,10 +31,10 @@ export default function AccreditationSlider() {
         <div className="grid lg:grid-cols-3 grid-cols-1 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
             {/* Approved By */}
             <div className="px-4 lg:px-6 text-center py-4 lg:py-0">
-                <h2 className="text-[var(--text-1)] mb-4 text-xl lg:text-2xl">
+                <h4 className="text-[var(--text-1)] mb-4">
                     Approved by
-                </h2>
-                <div className="max-w-[280px] mx-auto">
+                </h4>
+                <div className="max-w-[340px] mx-auto">
                     <Swiper
                         modules={[Autoplay]}
                         slidesPerView={2}
@@ -49,13 +49,13 @@ export default function AccreditationSlider() {
                     >
                         {approvedBy.map((item, idx) => (
                             <SwiperSlide key={idx}>
-                                <div className="h-20 flex items-center justify-center p-3 rounded-xl border border-gray-150 bg-gray-50/60 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <div className="h-28 flex items-center justify-center transition-all duration-300">
                                     <Image
                                         src={item.src}
                                         alt={item.alt}
-                                        width={120}
-                                        height={80}
-                                        className="object-contain max-h-14 w-auto duration-300"
+                                        width={180}
+                                        height={120}
+                                        className="object-contain max-h-24 w-auto duration-300"
                                     />
                                 </div>
                             </SwiperSlide>
@@ -66,10 +66,10 @@ export default function AccreditationSlider() {
 
             {/* Member Of */}
             <div className="px-4 lg:px-6 text-center py-4 lg:py-0">
-                <h2 className="text-[var(--text-1)] mb-4 text-xl lg:text-2xl">
+                <h4 className="text-[var(--text-1)] mb-4">
                     Member of
-                </h2>
-                <div className="max-w-[280px] mx-auto">
+                </h4>
+                <div className="max-w-[340px] mx-auto">
                     <Swiper
                         modules={[Autoplay]}
                         slidesPerView={2}
@@ -84,13 +84,13 @@ export default function AccreditationSlider() {
                     >
                         {memberOf.map((item, idx) => (
                             <SwiperSlide key={idx}>
-                                <div className="h-20 flex items-center justify-center p-3 rounded-xl border border-gray-150 bg-gray-50/60 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <div className="h-28 flex items-center justify-center transition-all duration-300">
                                     <Image
                                         src={item.src}
                                         alt={item.alt}
-                                        width={120}
-                                        height={80}
-                                        className="object-contain max-h-14 w-auto duration-300"
+                                        width={180}
+                                        height={120}
+                                        className="object-contain max-h-24 w-auto duration-300"
                                     />
                                 </div>
                             </SwiperSlide>
@@ -101,10 +101,10 @@ export default function AccreditationSlider() {
 
             {/* Collaboration With */}
             <div className="px-4 lg:px-6 text-center py-4 lg:py-0">
-                <h2 className="text-[var(--text-1)] mb-4 text-xl lg:text-2xl">
+                <h4 className="text-[var(--text-1)] mb-4">
                     Collaborations with
-                </h2>
-                <div className="max-w-[280px] mx-auto">
+                </h4>
+                <div className="max-w-[340px] mx-auto">
                     <Swiper
                         modules={[Autoplay]}
                         slidesPerView={2}
@@ -119,13 +119,13 @@ export default function AccreditationSlider() {
                     >
                         {collaboration.map((item, idx) => (
                             <SwiperSlide key={idx}>
-                                <div className="h-20 flex items-center justify-center p-3 rounded-xl border border-gray-150 bg-gray-50/60 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                <div className="h-28 flex items-center justify-center transition-all duration-300">
                                     <Image
                                         src={item.src}
                                         alt={item.alt}
-                                        width={120}
-                                        height={80}
-                                        className="object-contain max-h-14 w-auto duration-300"
+                                        width={180}
+                                        height={120}
+                                        className="object-contain max-h-24 w-auto duration-300"
                                     />
                                 </div>
                             </SwiperSlide>
