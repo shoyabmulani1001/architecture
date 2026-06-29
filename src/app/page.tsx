@@ -1,35 +1,32 @@
-import Image from "next/image";
-import Hero from "../sections/home-page/hero-section";
-import AboutUs from "../sections/home-page/aboutUs-section";
-import Programs from "../sections/home-page/programs";
-import CampusLife from "../sections/home-page/campus-life";
-import FoundersSection from "../sections/home-page/founder-section";
-import EventsSection from "../sections/home-page/events-section";
-import Testimonials from "../sections/home-page/testimonials";
-import ProgramsSection from "../sections/home-page/programs2";
-import StudentPlacements from "../sections/home-page/student-placement";
-import FAQAndCounsellor from "../sections/home-page/faq-section";
-import Collaboration from "../sections/home-page/collaboration";
-import CollaborationSection from "../sections/home-page/collaboration-slider";
+import Link from "next/link";
 
 export default function Home() {
+  const pageLinks = [
+    { name: "Home Page", href: "/home-page" },
+    { name: "Faculty Page", href: "/faculty-page" },
+    { name: "Events Page", href: "/events-page" },
+    { name: "Placement Page", href: "/placement-page" },
+    { name: "Placement New Page", href: "/placementnew-page" },
+    { name: "Contact Us", href: "/contact-us" },
+  ];
+
   return (
-    <div >
-      <main>
-        <Hero />
-        <CollaborationSection />
-        <AboutUs />
+    <main className="min-h-screen py-20 px-6 bg-[var(--primary-bg)] flex flex-col items-center justify-center">
+      <div className="w-full max-w-2xl bg-white/80 backdrop-blur-md rounded-2xl p-8 sm:p-12 shadow-xl border border-gray-100">
+        <h1 className="text-3xl font-bold text-[var(--text-1)] mb-8 text-center border-b pb-4">
+          All Pages Directory
+        </h1>
         
-        <Collaboration />
-        {/* <FoundersSection /> */}
-        {/* <Programs /> */}
-        <ProgramsSection />
-        <StudentPlacements />
-        <EventsSection />
-        <Testimonials />
-        <CampusLife />
-        <FAQAndCounsellor />
-      </main>
-    </div>
+        <div className="flex flex-col gap-6">
+          {pageLinks.map((link) => (
+            <Link key={link.href} href={link.href}>
+              <span className="text-xl font-medium text-[var(--text-1)] hover:text-[var(--primary)] transition-colors block p-2 rounded-lg hover:bg-gray-50">
+                {link.name}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </main>
   );
 }
