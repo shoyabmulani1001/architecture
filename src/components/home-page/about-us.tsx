@@ -28,7 +28,7 @@ export default function AboutAccordion({
                 return (
                     <div
                         key={card.id}
-                        className="bg-white rounded-[var(--r-lg-btn)] shadow-sm border border-gray-100 overflow-hidden transition-all duration-300"
+                        className="bg-white rounded-[var(--r-btn)] shadow-sm border border-gray-100 overflow-hidden transition-all duration-300"
                     >
                         <button
                             onClick={() =>

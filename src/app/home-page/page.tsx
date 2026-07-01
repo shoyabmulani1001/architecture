@@ -11,6 +11,8 @@ import StudentPlacements from "@/sections/home-page/student-placement";
 import FAQAndCounsellor from "@/sections/home-page/faq-section";
 import Collaboration from "@/sections/home-page/collaboration";
 import CollaborationSection from "@/sections/home-page/collaboration-slider";
+import LifeAtDYPSOASection from "@/sections/home-page/life-at";
+import EventsSectionNew from "@/sections/home-page/events-new";
 
 export default function FacultyPage() {
     return (
@@ -25,9 +27,11 @@ export default function FacultyPage() {
             {/* <Programs /> */}
             <ProgramsSection />
             <StudentPlacements />
+            <EventsSectionNew />
             <EventsSection />
             <Testimonials />
             <CampusLife />
+            <LifeAtDYPSOASection />
             <FAQAndCounsellor />
         </>
     );

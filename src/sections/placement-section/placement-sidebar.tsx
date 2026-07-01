@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const placementLinks = [
     {
@@ -47,6 +47,7 @@ const placementLinks = [
 
 export default function PlacementSidebar() {
     const [activeSection, setActiveSection] = useState("");
+    const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleIntersection = (entries: IntersectionObserverEntry[]) => {
@@ -71,6 +72,18 @@ export default function PlacementSidebar() {
         };
     }, []);
 
+    useEffect(() => {
+        if (!containerRef.current || !activeSection) return;
+        const activeEl = containerRef.current.querySelector(`[href="${activeSection}"]`);
+        if (activeEl) {
+            activeEl.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+                inline: "center"
+            });
+        }
+    }, [activeSection]);
+
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault();
         const targetElement = document.querySelector(href);
@@ -92,7 +105,7 @@ export default function PlacementSidebar() {
             <div className="hidden lg:block bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm">
 
                 <div className="bg-[var(--primary-bg)] p-6">
-                    <h4 className="text-[var(--text-1)]">
+                    <h4 className="text-[var(--text-1)] font-bold">
                         Placements
                     </h4>
                 </div>
@@ -107,7 +120,7 @@ export default function PlacementSidebar() {
                                 onClick={(e) => handleClick(e, item.href)}
                                 className={`block px-6 py-3 border-b border-gray-100 transition-all duration-300 font-medium ${
                                     isActive
-                                        ? "bg-[#3E4095] text-white"
+                                        ? "bg-[#3E4095] text-white font-semibold"
                                         : "text-black hover:bg-gray-50"
                                 }`}
                             >
@@ -121,6 +134,7 @@ export default function PlacementSidebar() {
 
             {/* Mobile/Tablet Horizontal Scrollable Version */}
             <div 
+                ref={containerRef}
                 className="lg:hidden w-full overflow-x-auto py-3 flex gap-2 border-b border-gray-200 bg-white -mx-4 px-4"
                 style={{ 
                     scrollbarWidth: 'none', 

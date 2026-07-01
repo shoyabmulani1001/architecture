@@ -42,7 +42,7 @@ export default function AboutUs() {
             id: 4,
             title: "DYPSOA Advantage",
             icon: (
-                <FaCheck className="text-[var(--primary)] text-xl" />
+                <FaCheck className="text-[var(--primary)] " />
             ),
             points: [
                 "Endless Learning & Growth Opportunities",
@@ -62,14 +62,14 @@ export default function AboutUs() {
     ];
 
     return (
-        <section className="bg-[#f7f5f2] py-20 overflow-hidden">
+        <section className="bg-[var(--primary-bg)] py-20 overflow-hidden">
             <div className="max-w-[1230px] mx-auto px-6">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
 
                     {/* Left Images */}
                     <div className="relative">
 
-                        <div className="overflow-hidden rounded-[var(--r-lg-btn)] border-[6px] border-white shadow-lg">
+                        <div className="overflow-hidden rounded-[var(--r-btn)] border-[6px] border-white shadow-sm">
                             <Image
                                 src="/Home-page/collage.jpeg"
                                 alt="Campus"
@@ -79,7 +79,7 @@ export default function AboutUs() {
                             />
                         </div>
 
-                        <div className="overflow-hidden rounded-[var(--r-lg-btn)] border-[6px] border-white shadow-lg mt-8">
+                        <div className="overflow-hidden rounded-[var(--r-btn)] border-[6px] border-white shadow-sm mt-8">
                             <Image
                                 src="/Home-page/about-std.jpg"
                                 alt="Students"

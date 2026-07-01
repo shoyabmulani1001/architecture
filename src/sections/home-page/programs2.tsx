@@ -57,11 +57,11 @@ export default function ProgramsSection() {
                 </div>
 
                 {/* Cards */}
-                <div className="grid lg:grid-cols-2 gap-8 max-w-[1100px] mx-auto">
+                <div className="grid lg:grid-cols-2  gap-8 max-w-[1100px] mx-auto">
                     {programs.map((program, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-[var(--r-lg-btn)] border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300"
+                            className="bg-white rounded-[var(--r-btn)] border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300"
                         >
                             {/* Image */}
                             <div className="relative h-[220px]">

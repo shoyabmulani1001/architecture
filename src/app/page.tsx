@@ -3,6 +3,7 @@ import Link from "next/link";
 export default function Home() {
   const pageLinks = [
     { name: "Home Page", href: "/home-page" },
+    { name: "New Home Page", href: "/new-home-page" },
     { name: "Faculty Page", href: "/faculty-page" },
     { name: "Events Page", href: "/events-page" },
     { name: "Placement Page", href: "/placement-page" },

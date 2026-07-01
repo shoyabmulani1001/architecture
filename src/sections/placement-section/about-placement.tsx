@@ -34,7 +34,7 @@ export default function AboutPlacement() {
         ],
 
         conclusion:
-            "We take pride in our consistent placement successes and our commitment to excellence. Through focused training, dynamic leadership, and value-driven guidance, the Training & Placement Cell at DYPIMED remains unwavering in its mission—empowering students not only to secure rewarding opportunities but to build impactful, sustainable careers.",
+            "We take pride in our consistent placement successes and our commitment to excellence. Through focused training, dynamic leadership, and value-driven guidance, the Training & Placement Cell at DYPSOA remains unwavering in its mission—empowering students not only to secure rewarding opportunities but to build impactful, sustainable careers.",
     };
 
     return (
