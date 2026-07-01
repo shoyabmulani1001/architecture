@@ -120,7 +120,7 @@ export default function Navbar() {
                     </div>
 
                     {/* Desktop Menu Links */}
-                    <nav className={`hidden lg:flex items-center lg:gap-4 xl:gap-10 transition-all duration-300 ${isScrolled ? "ml-56" : "ml-30"}`}>
+                    <nav className={`hidden lg:flex items-center lg:gap-4 xl:gap-10 min-[1280px]:max-[1350px]:gap-4 transition-all duration-300 ${isScrolled ? "ml-56 min-[1280px]:max-[1350px]:ml-40" : "ml-30"}`}>
                         <Link href="/">
                             <span
                                 className="text-white hover:text-gray-200 transition-colors cursor-pointer"
