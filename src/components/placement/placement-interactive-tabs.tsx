@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -19,8 +18,8 @@ export default function PlacementInteractiveTabs() {
         { id: "placement-brochure", label: "Placement Brochure" },
         { id: "placement-status", label: "Placement Status" },
         { id: "our-recruiters", label: "Our Recruiters" },
-        // { id: "student-verification", label: "Student Verification" },
-        // { id: "job-fair", label: "Job Fair" },
+        { id: "student-verification", label: "Student Verification" },
+        { id: "job-fair", label: "Job Fair" },
     ];
 
     const getTabClassName = (tabId: string) => {
@@ -30,12 +29,12 @@ export default function PlacementInteractiveTabs() {
         if (activeTab === tabId) {
             return "block animate-fadeIn";
         } else {
-            return "block lg:hidden";
+            return "hidden";
         }
     };
 
     return (
-        <div className="space-y-12">
+        <div className="space-y-8 lg:space-y-12">
             {/* Horizontal Tab Bar - Hidden on mobile/tablet, visible on desktop (lg and above) */}
             <div className="hidden lg:block overflow-x-auto scrollbar-none sticky top-20 z-30 py-2">
                 <nav className="flex justify-start md:justify-center px-3 py-2 space-x-2 min-w-max bg-[var(--primary-bg)] backdrop-blur-md rounded-2xl border border-[var(--primary-bg)] shadow-sm max-w-fit mx-auto">
@@ -57,8 +56,32 @@ export default function PlacementInteractiveTabs() {
                 </nav>
             </div>
 
+            {/* Dropdown Selector - Visible on mobile/tablet (below lg), Hidden on desktop */}
+            <div className="lg:hidden w-full max-w-md mx-auto px-4">
+                <label htmlFor="placement-tabs-select" className="sr-only">Select Section</label>
+                <div className="relative">
+                    <select
+                        id="placement-tabs-select"
+                        value={activeTab}
+                        onChange={(e) => setActiveTab(e.target.value)}
+                        className="w-full bg-white border border-gray-300 text-gray-900 text-base rounded-2xl focus:ring-[#3E4095] focus:border-[#3E4095] block p-4 pr-10 shadow-sm appearance-none font-semibold cursor-pointer"
+                    >
+                        {tabs.map((tab) => (
+                            <option key={tab.id} value={tab.id}>
+                                {tab.label}
+                            </option>
+                        ))}
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                        <svg className="fill-current h-5 w-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
             {/* Tab Contents - CSS hidden/block display toggle for SEO crawlability */}
-            <div className="relative space-y-16 lg:space-y-0">
+            <div className="relative space-y-0">
                 <div className={getTabClassName("about-placement")}>
                     <AboutPlacement />
                 </div>
@@ -68,7 +91,6 @@ export default function PlacementInteractiveTabs() {
                 <div className={getTabClassName("placement-brochure")}>
                     <PlacementBrochure />
                 </div>
-
                 <div className={getTabClassName("placement-status")}>
                     <PlacementStatus />
                 </div>

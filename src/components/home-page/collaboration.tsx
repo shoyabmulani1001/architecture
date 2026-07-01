@@ -67,7 +67,7 @@ export default function CollaborationTabs({
                 {sections[activeTab].logos.map((logo, index) => (
                     <div
                         key={index}
-                        className="bg-white border border-[var(--card-border)] rounded-[var(--r-lg-btn)] p-8 flex items-center justify-center hover:shadow-sm transition-all duration-300"
+                        className="bg-white border border-[var(--card-border)] rounded-[var(--r-btn)] p-8 flex items-center justify-center hover:shadow-sm transition-all duration-300"
                     >
                         <Image
                             src={logo.src}

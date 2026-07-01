@@ -3,7 +3,7 @@ export default function PlacementCommittee() {
         title: "Placement Committee",
 
         description: [
-            "The Placement Committee at Dr. D. Y. Patil Institute of Management & Research consists of dedicated faculty members and placement coordinators committed to providing excellent career opportunities for students.",
+            "The Placement Committee at DY Patil School of Architecture (DYPSOA) consists of dedicated faculty members and placement coordinators committed to providing excellent career opportunities for students.",
 
             "The committee actively works towards bridging the gap between academia and industry by organizing campus recruitment drives, internship opportunities, industrial interactions, career guidance sessions, and professional skill development programs.",
 

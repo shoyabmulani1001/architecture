@@ -28,7 +28,7 @@ const collaboration = [
 
 export default function AccreditationSlider() {
     return (
-        <div className="grid lg:grid-cols-3 grid-cols-1 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
+        <div className="grid lg:grid-cols-3 bg-[var(--primary-bg)] grid-cols-1 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
             {/* Approved By */}
             <div className="px-4 lg:px-6 text-center py-4 lg:py-0">
                 <h4 className="text-[var(--text-1)] mb-4">

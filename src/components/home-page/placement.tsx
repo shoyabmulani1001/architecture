@@ -61,10 +61,10 @@ export default function PlacementSlider({
                         key={index}
                         className="!h-auto"
                     >
-                        <div className="bg-[var(--primary-bg)] border border-[var(--card-border)] hover:shadow-lg transition-all duration-300 h-full">
+                        <div className="bg-[var(--primary-bg)] rounded-[var(--r-btn)] border border-[var(--card-border)] hover:shadow-sm transition-all duration-300 h-full">
 
                             {/* Image */}
-                            <div className="relative aspect-square overflow-hidden">
+                            <div className="relative rounded-[var(--r-btn)] aspect-square overflow-hidden">
                                 <img
                                     src={item.image}
                                     alt={item.name}
@@ -72,7 +72,7 @@ export default function PlacementSlider({
                                 />
 
                                 {item.featured && (
-                                    <div className="absolute top-4 left-4 w-3 h-3 rounded-full bg-[var(--primary)]" />
+                                    <div className="absolute top-4 left-4 w-3 h-3 rounded-[var(--r-btn)] bg-[var(--primary)]" />
                                 )}
                             </div>
 
@@ -90,7 +90,7 @@ export default function PlacementSlider({
                             {/* Company */}
                             <div className="border-t border-[var(--card-border)] px-5 py-3 flex items-center justify-between">
 
-                                <span className="text-[var(--text-2)] text-xs uppercase">
+                                <span className="text-[var(--text-2)] uppercase">
                                     Placed At
                                 </span>
 

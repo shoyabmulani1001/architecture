@@ -162,7 +162,7 @@ export default function OurRecruiters() {
             </div>
 
             {/* Bottom Content */}
-            <div className="bg-gradient-to-r from-[#3E4095] to-[#5658b9] rounded-3xl p-10 lg:p-14 text-[var(--primary-bg">
+            <div className="bg-gradient-to-r from-[#3E4095] to-[#5658b9] rounded-3xl p-10 lg:p-14 text-[var(--primary-bg)]">
 
                 <h3 className="mb-5">
                     Industry Connections That Build Careers

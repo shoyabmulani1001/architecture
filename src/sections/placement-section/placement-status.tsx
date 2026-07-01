@@ -199,57 +199,59 @@ export default function PlacementStatus() {
                 </div>
 
                 {/* Chart Area */}
-                <div className="relative h-[300px] border-b border-gray-200 flex items-end justify-between pt-6 px-2 md:px-12">
-                    {/* Y-axis gridlines */}
-                    <div className="absolute inset-0 flex flex-col justify-between pointer-events-none text-xs text-gray-400">
-                        <div className="w-full border-t border-dashed border-gray-100 pt-1">160</div>
-                        <div className="w-full border-t border-dashed border-gray-100 pt-1">120</div>
-                        <div className="w-full border-t border-dashed border-gray-100 pt-1">80</div>
-                        <div className="w-full border-t border-dashed border-gray-100 pt-1">40</div>
-                        <div className="w-full" />
-                    </div>
+                <div className="overflow-x-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                    <div className="relative h-[300px] min-w-[500px] md:min-w-0 border-b border-gray-200 flex items-end justify-between pt-6 px-2 md:px-12">
+                        {/* Y-axis gridlines */}
+                        <div className="absolute inset-0 flex flex-col justify-between pointer-events-none text-xs text-gray-400">
+                            <div className="w-full border-t border-dashed border-gray-100 pt-1">160</div>
+                            <div className="w-full border-t border-dashed border-gray-100 pt-1">120</div>
+                            <div className="w-full border-t border-dashed border-gray-100 pt-1">80</div>
+                            <div className="w-full border-t border-dashed border-gray-100 pt-1">40</div>
+                            <div className="w-full" />
+                        </div>
 
-                    {/* Bars Grid */}
-                    <div className="relative z-10 w-full flex justify-around items-end h-full">
-                        {chartData.map((data, index) => {
-                            const outgoingHeight = `${(data.outgoing / maxVal) * 100}%`;
-                            const placedHeight = `${(data.placed / maxVal) * 100}%`;
+                        {/* Bars Grid */}
+                        <div className="relative z-10 w-full flex justify-around items-end h-full">
+                            {chartData.map((data, index) => {
+                                const outgoingHeight = `${(data.outgoing / maxVal) * 100}%`;
+                                const placedHeight = `${(data.placed / maxVal) * 100}%`;
 
-                            return (
-                                <div key={index} className="flex flex-col items-center gap-3 w-1/4 h-full justify-end">
-                                    <div className="flex items-end gap-1.5 md:gap-5 h-[220px] w-full justify-center">
-                                        {/* Outgoing Bar */}
-                                        <div className="relative group flex flex-col items-center h-full justify-end">
-                                            {/* Tooltip */}
-                                            <div className="absolute -top-10 scale-0 group-hover:scale-100 bg-[#3E4095] text-white text-xs font-semibold px-2.5 py-1 rounded transition-all duration-200 shadow-md z-20 pointer-events-none whitespace-nowrap">
-                                                {data.outgoing} Students
+                                return (
+                                    <div key={index} className="flex flex-col items-center gap-3 w-1/4 h-full justify-end">
+                                        <div className="flex items-end gap-1.5 md:gap-5 h-[220px] w-full justify-center">
+                                            {/* Outgoing Bar */}
+                                            <div className="relative group flex flex-col items-center h-full justify-end">
+                                                {/* Tooltip */}
+                                                <div className="absolute -top-10 scale-0 group-hover:scale-100 bg-[#3E4095] text-white text-xs font-semibold px-2.5 py-1 rounded transition-all duration-200 shadow-md z-20 pointer-events-none whitespace-nowrap">
+                                                    {data.outgoing} Students
+                                                </div>
+                                                <div
+                                                    style={{ height: outgoingHeight }}
+                                                    className="w-5 sm:w-8 md:w-12 bg-[#3E4095] rounded-t-lg transition-all duration-500 group-hover:opacity-90 cursor-pointer shadow-sm"
+                                                />
                                             </div>
-                                            <div
-                                                style={{ height: outgoingHeight }}
-                                                className="w-5 sm:w-8 md:w-12 bg-[#3E4095] rounded-t-lg transition-all duration-500 group-hover:opacity-90 cursor-pointer shadow-sm"
-                                            />
+
+                                            {/* Placed Bar */}
+                                            <div className="relative group flex flex-col items-center h-full justify-end">
+                                                {/* Tooltip */}
+                                                <div className="absolute -top-10 scale-0 group-hover:scale-100 bg-emerald-500 text-white text-xs font-semibold px-2.5 py-1 rounded transition-all duration-200 shadow-md z-20 pointer-events-none whitespace-nowrap">
+                                                    {data.placed} Placed ({Math.round((data.placed / data.outgoing) * 100)}%)
+                                                </div>
+                                                <div
+                                                    style={{ height: placedHeight }}
+                                                    className="w-5 sm:w-8 md:w-12 bg-emerald-500 rounded-t-lg transition-all duration-500 group-hover:opacity-90 cursor-pointer shadow-sm"
+                                                />
+                                            </div>
                                         </div>
 
-                                        {/* Placed Bar */}
-                                        <div className="relative group flex flex-col items-center h-full justify-end">
-                                            {/* Tooltip */}
-                                            <div className="absolute -top-10 scale-0 group-hover:scale-100 bg-emerald-500 text-white text-xs font-semibold px-2.5 py-1 rounded transition-all duration-200 shadow-md z-20 pointer-events-none whitespace-nowrap">
-                                                {data.placed} Placed ({Math.round((data.placed / data.outgoing) * 100)}%)
-                                            </div>
-                                            <div
-                                                style={{ height: placedHeight }}
-                                                className="w-5 sm:w-8 md:w-12 bg-emerald-500 rounded-t-lg transition-all duration-500 group-hover:opacity-90 cursor-pointer shadow-sm"
-                                            />
-                                        </div>
+                                        {/* Year Label */}
+                                        <span className="text-xs md:text-sm font-semibold text-black mt-2">
+                                            {data.year}
+                                        </span>
                                     </div>
-
-                                    {/* Year Label */}
-                                    <span className="text-xs md:text-sm font-semibold text-black mt-2">
-                                        {data.year}
-                                    </span>
-                                </div>
-                            );
-                        })}
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>

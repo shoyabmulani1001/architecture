@@ -56,10 +56,10 @@ export default function EventsSlider({
             >
                 {events.map((event, index) => (
                     <SwiperSlide key={index}>
-                        <div className="bg-[var(--secondary-bg)] rounded-[var(--r-lg-btn)] overflow-hidden h-full">
+                        <div className="bg-[var(--secondary-bg)] rounded-[var(--r-btn)] overflow-hidden h-full">
 
                             <div className="p-3">
-                                <div className="relative h-[220px] rounded-[var(--r-lg-btn)] overflow-hidden">
+                                <div className="relative h-[220px] rounded-[var(--r-btn)] overflow-hidden">
                                     <Image
                                         src={event.image}
                                         alt={event.title}
